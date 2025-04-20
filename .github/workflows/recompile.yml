@@ -26,7 +26,7 @@ jobs:
           java -jar apktool.jar b decompiled_apk_folder -o recompiled_output.apk
 
       - name: Upload recompiled APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: recompiled-apk
           path: recompiled_output.apk
