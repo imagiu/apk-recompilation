@@ -1,0 +1,32 @@
+name: Recompile APK
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Download Apktool
+        run: |
+          wget https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar -O apktool.jar
+
+      - name: Recompile APK
+        run: |
+          java -jar apktool.jar b decompiled_apk_folder -o recompiled_output.apk
+
+      - name: Upload recompiled APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: recompiled-apk
+          path: recompiled_output.apk
