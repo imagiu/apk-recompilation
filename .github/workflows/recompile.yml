@@ -39,10 +39,15 @@ jobs:
           cd "${{ steps.detect.outputs.folder_name }}" || exit 1
           apktool b . -o "../output/${{ steps.detect.outputs.output_apk }}"
 
-      - name: Push APK to repo
+      - name: Create recompile_done.flag
+        run: |
+          echo "done" > recompile_done.flag
+
+      - name: Push APK and flag to repo
         run: |
           git config user.name "ATHENA-Bot"
           git config user.email "athena@bot.com"
           git add output/
-          git commit -m "chore: recompiled APK"
+          git add recompile_done.flag
+          git commit -m "chore: recompiled APK + flag"
           git push origin main
