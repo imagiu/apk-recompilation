@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
 
     - name: Set up Java
       uses: actions/setup-java@v2
@@ -27,11 +29,8 @@ jobs:
       run: |
         java -jar apktool.jar b decompiled_apk_folder -o recompiled_output.apk
 
-    - name: Upload artifact
-      run: |
-        mkdir -p upload && mv recompiled_output.apk upload/
     - name: Upload recompiled APK
       uses: actions/upload-artifact@v2
       with:
         name: recompiled-apk
-        path: upload/recompiled_output.apk
+        path: recompiled_output.apk
