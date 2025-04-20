@@ -26,13 +26,23 @@ jobs:
           chmod +x apktool
           sudo mv apktool apktool.jar /usr/local/bin/
 
+      - name: Detect APK folder name
+        id: detect
+        run: |
+          folder_name=$(find . -maxdepth 1 -type d ! -name '.' | tail -n1 | sed 's|./||')
+          echo "folder_name=$folder_name" >> $GITHUB_OUTPUT
+          echo "output_apk=${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
+
       - name: Recompile APK
         run: |
-          cd "$(find . -type d -name '1MB_1.0_apkcombo.com')" || exit 1
-          apktool b . -o ../1MB_1.0_recompiled.apk
+          mkdir -p output
+          cd "${{ steps.detect.outputs.folder_name }}" || exit 1
+          apktool b . -o "../output/${{ steps.detect.outputs.output_apk }}"
 
-      - name: Upload APK Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: recompiled-apk
-          path: 1MB_1.0_recompiled.apk
+      - name: Push APK to repo
+        run: |
+          git config user.name "ATHENA-Bot"
+          git config user.email "athena@bot.com"
+          git add output/
+          git commit -m "chore: recompiled APK"
+          git push origin main
