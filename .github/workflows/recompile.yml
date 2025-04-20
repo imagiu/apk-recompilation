@@ -6,27 +6,32 @@ on:
       - main
 
 jobs:
-  build:
+  recompile:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
+    - name: Set up Java
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
 
-      - name: Download Apktool
-        run: |
-          wget https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar -O apktool.jar
+    - name: Download Apktool
+      run: |
+        curl -L -o apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar
 
-      - name: Recompile APK
-        run: |
-          java -jar apktool.jar b decompiled_apk_folder -o recompiled_output.apk
+    - name: Recompile APK
+      run: |
+        java -jar apktool.jar b decompiled_apk_folder -o recompiled_output.apk
 
-      - name: Upload recompiled APK
-        uses: actions/upload-artifact@v3
-        with:
-          name: recompiled-apk
-          path: recompiled_output.apk
+    - name: Upload artifact
+      run: |
+        mkdir -p upload && mv recompiled_output.apk upload/
+    - name: Upload recompiled APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: recompiled-apk
+        path: upload/recompiled_output.apk
