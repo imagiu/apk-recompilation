@@ -7,30 +7,32 @@ on:
 
 jobs:
   recompile:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        persist-credentials: false
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Java
-      uses: actions/setup-java@v2
-      with:
-        distribution: 'adopt'
-        java-version: '11'
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '11'
 
-    - name: Download Apktool
-      run: |
-        curl -L -o apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar
+      - name: Download Apktool
+        run: |
+          wget https://github.com/iBotPeaches/Apktool/releases/download/v2.9.3/apktool_2.9.3.jar -O apktool.jar
+          echo -e '#!/bin/sh\njava -jar $(dirname "$0")/apktool.jar "$@"' > apktool
+          chmod +x apktool
+          sudo mv apktool apktool.jar /usr/local/bin/
 
-    - name: Recompile APK
-      run: |
-        java -jar apktool.jar b decompiled_apk_folder -o recompiled_output.apk
+      - name: Recompile APK
+        run: |
+          cd "$(find . -type d -name '1MB_1.0_apkcombo.com')" || exit 1
+          apktool b . -o ../1MB_1.0_recompiled.apk
 
-    - name: Upload recompiled APK
-      uses: actions/upload-artifact@v2
-      with:
-        name: recompiled-apk
-        path: recompiled_output.apk
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: recompiled-apk
+          path: 1MB_1.0_recompiled.apk
