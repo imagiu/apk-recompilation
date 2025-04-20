@@ -29,25 +29,36 @@ jobs:
       - name: Detect APK folder name
         id: detect
         run: |
-          folder_name=$(find . -maxdepth 1 -type d ! -name '.' | tail -n1 | sed 's|./||')
+          folder_name=$(find . -maxdepth 1 -type d ! -name '.' | head -n1 | sed 's|./||')
           echo "folder_name=$folder_name" >> $GITHUB_OUTPUT
           echo "output_apk=${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
 
+      - name: Check if folder has apktool.yml
+        id: check_apktool
+        run: |
+          if [ -f "${{ steps.detect.outputs.folder_name }}/apktool.yml" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Recompile APK
+        if: steps.check_apktool.outputs.exists == 'true'
         run: |
           mkdir -p output
-          cd "${{ steps.detect.outputs.folder_name }}" || exit 1
+          cd "${{ steps.detect.outputs.folder_name }}"
           apktool b . -o "../output/${{ steps.detect.outputs.output_apk }}"
 
       - name: Create recompile_done.flag
+        if: steps.check_apktool.outputs.exists == 'true'
         run: |
           echo "done" > recompile_done.flag
 
       - name: Push APK and flag to repo
+        if: steps.check_apktool.outputs.exists == 'true'
         run: |
           git config user.name "ATHENA-Bot"
           git config user.email "athena@bot.com"
-          git add output/
-          git add recompile_done.flag
+          git add output/ recompile_done.flag
           git commit -m "chore: recompiled APK + flag"
           git push origin main
