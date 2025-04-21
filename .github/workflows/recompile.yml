@@ -56,9 +56,12 @@ jobs:
 
       - name: Push APK and flag to repo
         if: steps.check_apktool.outputs.exists == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name "ATHENA-Bot"
           git config user.email "athena@bot.com"
-          git add output/ recompile_done.flag
-          git commit -m "chore: recompiled APK + flag"
+          git add output/ recompile_done.flag || echo "Nothing to add"
+          git commit -m "chore: recompiled APK + flag" || echo "Nothing to commit"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
           git push origin main
