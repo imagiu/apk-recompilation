@@ -37,7 +37,8 @@ jobs:
       - name: Check if folder has apktool.yml
         id: check_apktool
         run: |
-          if [ -f "${{ steps.detect.outputs.folder_name }}/apktool.yml" ]; then
+          folder="${{ steps.detect.outputs.folder_name }}"
+          if [ -f "$folder/apktool.yml" ]; then
             echo "exists=true" >> $GITHUB_OUTPUT
           else
             echo "exists=false" >> $GITHUB_OUTPUT
