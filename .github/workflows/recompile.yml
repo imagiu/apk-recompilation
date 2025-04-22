@@ -44,12 +44,19 @@ jobs:
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Debug folder contents
+        run: |
+          folder="${{ steps.detect.outputs.folder_name }}"
+          echo "Listing contents of $folder:"
+          ls -al "$folder"
+
       - name: Recompile APK
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
           mkdir -p output
           cd "${{ steps.detect.outputs.folder_name }}"
           apktool b . -o "../output/${{ steps.detect.outputs.output_apk }}"
+          echo "Recompilation complete."
 
       - name: Create recompile_done.flag
         if: steps.check_apktool.outputs.exists == 'true'
