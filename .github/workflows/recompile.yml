@@ -29,7 +29,11 @@ jobs:
       - name: Detect APK folder name
         id: detect
         run: |
-          folder_name=$(find . -maxdepth 1 -type d ! -name '.' ! -name '.git' ! -name '.github' | head -n1 | sed 's|./||')
+          folder_name=$(find . -maxdepth 1 -type d ! -name '.' ! -name '.git' ! -name '.github' ! -path '*/\.*' | head -n1 | sed 's|./||')
+          if [ -z "$folder_name" ]; then
+            echo "No valid folder found for recompilation."
+            exit 1
+          fi
           echo "Detected folder: $folder_name"
           echo "folder_name=$folder_name" >> $GITHUB_OUTPUT
           echo "output_apk=${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
@@ -60,13 +64,12 @@ jobs:
 
       - name: Create recompile_done.flag
         if: steps.check_apktool.outputs.exists == 'true'
-        run: |
-          echo "done" > recompile_done.flag
+        run: echo "done" > recompile_done.flag
 
       - name: Push APK and flag to repo
         if: steps.check_apktool.outputs.exists == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "ATHENA-Bot"
           git config user.email "athena@bot.com"
