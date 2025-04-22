@@ -1,0 +1,26 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: 1MB_1.0_apkcombo.com.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- png
+- ogg
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '22'
+  targetSdkVersion: '29'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  stamp-cert-sha256: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.7.0-dirty
+versionInfo:
+  versionCode: '11'
+  versionName: '1.0'
