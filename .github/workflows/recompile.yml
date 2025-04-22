@@ -29,8 +29,8 @@ jobs:
       - name: Detect APK folder name
         id: detect
         run: |
-          folder_name=$(find . -maxdepth 1 -type d ! -name '.' ! -name '.git' | head -n1 | sed 's|./||')
-          echo "Detected folder: $folder_name"  # This line logs the picked folder
+          folder_name=$(find . -maxdepth 1 -type d ! -name '.' ! -name '.git' ! -name '.github' | head -n1 | sed 's|./||')
+          echo "Detected folder: $folder_name"
           echo "folder_name=$folder_name" >> $GITHUB_OUTPUT
           echo "output_apk=${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
 
