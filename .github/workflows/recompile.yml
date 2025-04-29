@@ -28,10 +28,11 @@ jobs:
 
       - name: Download apksigner
         run: |
-          mkdir -p $HOME/android-sdk/build-tools/34.0.0
-          wget https://dl.google.com/android/repository/build-tools_r34.0.0-linux.zip
-          unzip build-tools_r34.0.0-linux.zip -d $HOME/android-sdk/build-tools
-          echo "$HOME/android-sdk/build-tools/34.0.0" >> $GITHUB_PATH
+          mkdir -p $HOME/android-sdk/build-tools/33.0.0
+          wget https://dl.google.com/android/repository/build-tools_r33.0.0-linux.zip
+          unzip build-tools_r33.0.0-linux.zip -d $HOME/android-sdk/build-tools
+          echo "$HOME/android-sdk/build-tools/33.0.0" >> $GITHUB_PATH
+
 
       - name: Detect APK folder name
         id: detect
