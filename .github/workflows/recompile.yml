@@ -26,6 +26,13 @@ jobs:
           chmod +x apktool
           sudo mv apktool apktool.jar /usr/local/bin/
 
+      - name: Download apksigner
+        run: |
+          mkdir -p $HOME/android-sdk/build-tools/34.0.0
+          wget https://dl.google.com/android/repository/build-tools_r34.0.0-linux.zip
+          unzip build-tools_r34.0.0-linux.zip -d $HOME/android-sdk/build-tools
+          echo "$HOME/android-sdk/build-tools/34.0.0" >> $GITHUB_PATH
+
       - name: Detect APK folder name
         id: detect
         run: |
@@ -37,6 +44,7 @@ jobs:
           echo "Detected folder: $folder_name"
           echo "folder_name=$folder_name" >> $GITHUB_OUTPUT
           echo "output_apk=${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
+          echo "signed_apk=signed-${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
 
       - name: Check if folder has apktool.yml
         id: check_apktool
@@ -62,18 +70,35 @@ jobs:
           apktool b . -o "../output/${{ steps.detect.outputs.output_apk }}"
           echo "Recompilation complete."
 
+      - name: Decode keystore
+        if: steps.check_apktool.outputs.exists == 'true'
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > athena-keystore.jks
+
+      - name: Sign APK
+        if: steps.check_apktool.outputs.exists == 'true'
+        run: |
+          apksigner sign \
+            --ks athena-keystore.jks \
+            --ks-key-alias ${{ secrets.KEY_ALIAS }} \
+            --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
+            --key-pass pass:${{ secrets.KEY_PASSWORD }} \
+            --out "output/${{ steps.detect.outputs.signed_apk }}" \
+            "output/${{ steps.detect.outputs.output_apk }}"
+          echo "APK signing complete."
+
       - name: Create recompile_done.flag
         if: steps.check_apktool.outputs.exists == 'true'
         run: echo "done" > recompile_done.flag
 
-      - name: Push APK and flag to repo
+      - name: Push signed APK and flag to repo
         if: steps.check_apktool.outputs.exists == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "ATHENA-Bot"
           git config user.email "athena@bot.com"
-          git add output/ recompile_done.flag || echo "Nothing to add"
-          git commit -m "chore: recompiled APK + flag" || echo "Nothing to commit"
+          git add output/${{ steps.detect.outputs.signed_apk }} recompile_done.flag || echo "Nothing to add"
+          git commit -m "chore: signed recompiled APK + flag" || echo "Nothing to commit"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
           git push origin main
