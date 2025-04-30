@@ -26,13 +26,15 @@ jobs:
           chmod +x apktool
           sudo mv apktool apktool.jar /usr/local/bin/
 
-      - name: Download apksigner
+      - name: Install Android SDK Build Tools
         run: |
-          mkdir -p $HOME/android-sdk/build-tools/33.0.0
-          wget https://dl.google.com/android/repository/build-tools_r33.0.0-linux.zip
-          unzip build-tools_r33.0.0-linux.zip -d $HOME/android-sdk/build-tools
-          echo "$HOME/android-sdk/build-tools/33.0.0" >> $GITHUB_PATH
-
+          mkdir -p $HOME/android-sdk/cmdline-tools
+          cd $HOME/android-sdk/cmdline-tools
+          wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O sdk-tools.zip
+          unzip sdk-tools.zip -d tools
+          export PATH=$HOME/android-sdk/cmdline-tools/tools/bin:$PATH
+          yes | tools/bin/sdkmanager --sdk_root=$HOME/android-sdk --install "build-tools;34.0.0"
+          echo "$HOME/android-sdk/build-tools/34.0.0" >> $GITHUB_PATH
 
       - name: Detect APK folder name
         id: detect
@@ -76,10 +78,10 @@ jobs:
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > athena-keystore.jks
 
-      - name: Sign APK
+      - name: Sign APK using apksigner from Build Tools
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
-          apksigner sign \
+          $HOME/android-sdk/build-tools/34.0.0/apksigner sign \
             --ks athena-keystore.jks \
             --ks-key-alias ${{ secrets.KEY_ALIAS }} \
             --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
