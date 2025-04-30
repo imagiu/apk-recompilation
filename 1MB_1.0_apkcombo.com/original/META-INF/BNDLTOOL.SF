@@ -1,0 +1,283 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA-256-Digest-Manifest: 0tzG+mk7lhjrKvQ/nOSQacwaPdrVYx65WGBOYr+uSm0=
+X-Android-APK-Signed: 2, 3
+
+Name: AndroidManifest.xml
+SHA-256-Digest: Q1hLX44KMaPRLc3xyoqWe6FcTBqLDnyRRZpuNK8P+tE=
+
+Name: assets/www/c2runtime.js
+SHA-256-Digest: H4KVEefrrlgiuclV17wwJHIj46gRIpYii1ziq5a4D3c=
+
+Name: assets/www/cordova-js-src/android/nativeapiprovider.js
+SHA-256-Digest: D4eaaI0PDXo352ZkHReJTKu+QkaHoLSVuWnWARLfrWM=
+
+Name: assets/www/cordova-js-src/android/promptbasednativeapi.js
+SHA-256-Digest: zIMlyZ+q22b8WuWEfq3A1RzwapEz7T3Y2OHt1TQHSE4=
+
+Name: assets/www/cordova-js-src/exec.js
+SHA-256-Digest: 03gzqeVsTJEtPcjX3btVOU26SQ8xO6aQGsvXbaxepxU=
+
+Name: assets/www/cordova-js-src/platform.js
+SHA-256-Digest: vdrlOY/1vUfaiyOfUpWnzEYXF96h77N64xKtDwSS8K4=
+
+Name: assets/www/cordova-js-src/plugin/android/app.js
+SHA-256-Digest: Nj9rBZLN41YepByLOeKtTl4GvU8syAXuvmJXaqOOKVE=
+
+Name: assets/www/cordova.js
+SHA-256-Digest: 9mnoYbRSaR/Ly6WmJ5cZoCEdemRQQ+HzeL9QCSm50SM=
+
+Name: assets/www/cordova_plugins.js
+SHA-256-Digest: 5IQyBfxXkycfxnqF57o752GNtdMcc1fOgfLUdpS/FvY=
+
+Name: assets/www/data.js
+SHA-256-Digest: gWC/sZgU9n3hmA7EaMpC24iw+e4QpjnDrqE3bAYllQU=
+
+Name: assets/www/icon-114.png
+SHA-256-Digest: CfFz1Z1U9hicDyS2yKPye+uUVWXVucDazuBccdC6P8A=
+
+Name: assets/www/icon-128.png
+SHA-256-Digest: 3EW8gYyKodEYwrwvl4MPBFja65wT2mL/MH1DfBH/IEI=
+
+Name: assets/www/icon-16.png
+SHA-256-Digest: Hr9t8mZuZQCdSOqP5LjQc0ok4Ytwp8qn6hVWTPynRsg=
+
+Name: assets/www/icon-256.png
+SHA-256-Digest: m5lFyxgmKQm56eo9SvCg2u9kIyukh2kVQNZ3C3b86t0=
+
+Name: assets/www/icon-32.png
+SHA-256-Digest: WH1kHkTD02gFkFSCb9P4PyyAcyb6s/BPA1HOgBS/4dY=
+
+Name: assets/www/images/arrows-sheet0.png
+SHA-256-Digest: WZqmCMIYC/XFlmtpqnH1SvB6sD5FpzxeslWtJ6SYTvQ=
+
+Name: assets/www/images/arrows-sheet1.png
+SHA-256-Digest: 3iyyz+AO7JUA8H1/fsramaIhrgCizHBWqD34hSze0Qo=
+
+Name: assets/www/images/arrows-sheet2.png
+SHA-256-Digest: gdpbu9EdcqvDXfsyp3yAdTuTF4m1jEUR8yzEDaR3QeI=
+
+Name: assets/www/images/atack_ani-sheet0.png
+SHA-256-Digest: tnxj4wxSeniU7mTZANZ9dhnAvzBKCPpQ6OVzMUP8cMU=
+
+Name: assets/www/images/atack_ani-sheet1.png
+SHA-256-Digest: ++knZJ1DDdbYmC/2fwmH63GnfzDKDkCJIQSE1Bkp78c=
+
+Name: assets/www/images/atack_ani-sheet2.png
+SHA-256-Digest: VHh8TVmNkLWLln+36zRmnS0PHP2sQE48XTPPk1D0HG4=
+
+Name: assets/www/images/bar.png
+SHA-256-Digest: XHweYme2oltHMZmGGEm7bYvdjnZ40Pp4j3fr733GYSo=
+
+Name: assets/www/images/barbg.png
+SHA-256-Digest: bxdMKHeuetB8nRPqHgv58zASoWxE7QpFbAhcQQzB8+c=
+
+Name: assets/www/images/boom-sheet0.png
+SHA-256-Digest: 8XdOnmeDgFSEWOq3oEyQsHrEQ3e4U5bk4+b5dlh7MwY=
+
+Name: assets/www/images/grass-sheet0.png
+SHA-256-Digest: seRCmCJBPIDvTdK+gwgGljqQSKPH4MSRx/O/JVqjisw=
+
+Name: assets/www/images/heart-sheet0.png
+SHA-256-Digest: HOp2pjSRWfCiCEJcyWS1wir74a2iIlKhYG6h9nI1ku0=
+
+Name: assets/www/images/joy-sheet0.png
+SHA-256-Digest: oMLUEShho1uN/LwJLzjl2HGG5LxDy1lRRrFx2+Fhnek=
+
+Name: assets/www/images/light_white-sheet0.png
+SHA-256-Digest: kCgzXwXM8M+gVTOCx3WdJm6QU80k9tlsqHFJyswPCsc=
+
+Name: assets/www/images/map_destreyoder-sheet0.png
+SHA-256-Digest: 1N8I/CVaYyghRN49a+Lg+A+Bx+gtvhpRVL+knhByBOI=
+
+Name: assets/www/images/mapgenerator-sheet0.png
+SHA-256-Digest: jbT1vZsCPFiwLsed7Hx98r4/luODI6LLS8yLsXAgG0Q=
+
+Name: assets/www/images/monster1-sheet0.png
+SHA-256-Digest: NQcHlf68pn9axPkj0pa+RdQODzNtof3vOsG/Ed+7+PQ=
+
+Name: assets/www/images/monster1-sheet1.png
+SHA-256-Digest: QzQ4jKOYWcyDyOVQSSB5JJ9AU/RrE3lq/me4eA1ZA44=
+
+Name: assets/www/images/monster1-sheet2.png
+SHA-256-Digest: PCz7mp37C2BEj1HdJmTI87RvrVlqQLmEcz2esTE1KxU=
+
+Name: assets/www/images/partile_phsc-sheet0.png
+SHA-256-Digest: EElp8BBXWG1ExLD6RmHFa1EK5WPei4LF2fOFjqyuDuA=
+
+Name: assets/www/images/pix-sheet0.png
+SHA-256-Digest: T8wFLQ9RCevwpK/d2/8b+Sl/03ZvayRrafl6yr0C1eA=
+
+Name: assets/www/images/pix-sheet1.png
+SHA-256-Digest: CAtFzy1BZgqj2jRShQZGto51KVkH29+sS5Sk/eyw7nQ=
+
+Name: assets/www/images/player-sheet0.png
+SHA-256-Digest: GRuqCUKcisUFbnxrA+ZNXIv6759SUOERvjC0qD0+tEk=
+
+Name: assets/www/images/player-sheet1.png
+SHA-256-Digest: uJRYHTFfARJDac3nfXWPx0BXjtrV0y93/XuRqVv0KkA=
+
+Name: assets/www/images/smartjoystick.png
+SHA-256-Digest: ksKk6vVjGDFlUKXKtSZ+rfmliZv50Y4nkCnObUf4W/c=
+
+Name: assets/www/images/snow-sheet0.png
+SHA-256-Digest: HkGwB5QPVPfm4CQy2NJv5jHVFLn3qfL/48don/BJV54=
+
+Name: assets/www/images/spritefont.png
+SHA-256-Digest: HAK64Z234wMzljP5cIf7AdgDTSuW9wn6IF8lmqiE/L4=
+
+Name: assets/www/images/stoy-sheet0.png
+SHA-256-Digest: IuBO+OIdpu+H+yV5mYJoV1I2wj1O1JTK+6Z5EdlvYCw=
+
+Name: assets/www/images/stoy-sheet1.png
+SHA-256-Digest: SSqhlgY4DALXZ2oQ5YI6idD7w3T65ihae26NvCXSOVo=
+
+Name: assets/www/images/stoy-sheet2.png
+SHA-256-Digest: WdERonBtG/mulJSiyun/5NWttvCODBw2vQMsOGKkhVs=
+
+Name: assets/www/images/targen_clener-sheet0.png
+SHA-256-Digest: Z+mK72GrZmvarsOXQrBlJRSzd7voSkagVVfNiWRi22Y=
+
+Name: assets/www/images/target-sheet0.png
+SHA-256-Digest: gFthA80eStGS7yerUmE2aNe0yLblYSiql1f5a9qTp0I=
+
+Name: assets/www/images/tilemap.png
+SHA-256-Digest: I2mrZAaNBSPS6o4MhGlEbWWFEWA3QqEhffn+K/bkbi4=
+
+Name: assets/www/images/tilemap2.png
+SHA-256-Digest: WJw7GSXV0ooWGImIONdthvi7pjU10OSUHFZ+FsFwrqU=
+
+Name: assets/www/images/treess-sheet0.png
+SHA-256-Digest: X3YAf6dTcEXKseIcr7vfdKaT0/y3r3G0xOqZzdYuK4g=
+
+Name: assets/www/index.html
+SHA-256-Digest: 0gJ/3Nm2xG8HdR7fiSs0yh/b41zqGOPSX4msduTaNRQ=
+
+Name: assets/www/jquery-3.4.1.min.js
+SHA-256-Digest: 25mBrGlhupnqA6MldstNy/MmhzRl65zDTif658SmgKc=
+
+Name: assets/www/media/blip.ogg
+SHA-256-Digest: uP5BqTsflLz1sT7tkKrolMggOxlDdRQwJYIetvGQcBI=
+
+Name: assets/www/media/boom.ogg
+SHA-256-Digest: WsCKGB7+9+BpH954CEFVyMawSE+6rAwuIu/64imcFHI=
+
+Name: assets/www/media/boom2.ogg
+SHA-256-Digest: mKH0kgC5PkXnT/6h5jjcjYE6hG/fmNKRMQ3KPnwqqrE=
+
+Name: assets/www/media/boom3.ogg
+SHA-256-Digest: gy76rWCg5E/CNqpTf9Co3r+qkVNshJByrqGfGuJ8HUw=
+
+Name: assets/www/media/boom4.ogg
+SHA-256-Digest: KnljU4ro22A2b6yPcB4fAH+HLo4fng7xMw0611UuH0s=
+
+Name: assets/www/media/jump.ogg
+SHA-256-Digest: bSe5dhl1vorQBY13YlcLOcHTqW1huH14/RNUA3eU5Ng=
+
+Name: assets/www/media/lose.ogg
+SHA-256-Digest: Q1ml6nlXMcjtmMBapW+bqnIhSqySWob9gQ6Wtav1LNU=
+
+Name: assets/www/media/punch.ogg
+SHA-256-Digest: yAYTW5WgLgrM7JVtpRHw2ZiAt78ol8cGRmt+6oIcRO8=
+
+Name: assets/www/media/tounchenemy.ogg
+SHA-256-Digest: ahJ5MK+Kqemn8TuZyiu5zBiqOwGi9rVCXoFVvrSts4k=
+
+Name: assets/www/media/win.ogg
+SHA-256-Digest: 5Am2KkZNAFb+ytd/IkdGT4kGayNJ56YFAqUmseRYvCA=
+
+Name: assets/www/plugins/cordova-plugin-file/www/DirectoryEntry.js
+SHA-256-Digest: hAAGxWSgSWS81+kBWYGY8Pc2S/lbO4dSYdn/1UzDKoA=
+
+Name: assets/www/plugins/cordova-plugin-file/www/DirectoryReader.js
+SHA-256-Digest: 0QnczjCirH5dr3RsjSwVbc54+d54Qn2cNqvSLSb6S20=
+
+Name: assets/www/plugins/cordova-plugin-file/www/Entry.js
+SHA-256-Digest: Gl9sWZrWRa8UtrUiNhxAbCNltY3fPAY6SC3sXjGrDsY=
+
+Name: assets/www/plugins/cordova-plugin-file/www/File.js
+SHA-256-Digest: xQ88L63Z0N4O9+y+V+LqXznkx9OZMT+8HeJSLRpicVI=
+
+Name: assets/www/plugins/cordova-plugin-file/www/FileEntry.js
+SHA-256-Digest: fOTRhi++JmEP0K25v5qGMmrPCEU+p0gC5RYiA9NMtuo=
+
+Name: assets/www/plugins/cordova-plugin-file/www/FileError.js
+SHA-256-Digest: w/HPWo3TjNNtHKTiOlkfxM4tYOwxKJRu6pmWA3Ivw0E=
+
+Name: assets/www/plugins/cordova-plugin-file/www/FileReader.js
+SHA-256-Digest: D2lXWjRxQF9CwDS9FYTDp/Ih4TNq/fBcoco2GpaYP/0=
+
+Name: assets/www/plugins/cordova-plugin-file/www/FileSystem.js
+SHA-256-Digest: uH4GMgLxmirQMshuWkjd/6e7ux+vMTQDMyueD7vs/gU=
+
+Name: assets/www/plugins/cordova-plugin-file/www/FileUploadOptions.js
+SHA-256-Digest: aHORoErE/xaCjpMOU5wF3+LUprdVlwjz5DuLVDOzc2U=
+
+Name: assets/www/plugins/cordova-plugin-file/www/FileUploadResult.js
+SHA-256-Digest: PVTJ4iWQSeZ+p54ZC60wqEH6JsUrN0+aqyCMfGUKmA8=
+
+Name: assets/www/plugins/cordova-plugin-file/www/FileWriter.js
+SHA-256-Digest: tNTBKBrA3jHPbgEjrv7gGyT68Edmz5WbqvOnQNofBCY=
+
+Name: assets/www/plugins/cordova-plugin-file/www/Flags.js
+SHA-256-Digest: 5f7ynmgCf5ozSi1wn/SdHKD/XhyPu44ugAtqTx4S3ms=
+
+Name: assets/www/plugins/cordova-plugin-file/www/LocalFileSystem.js
+SHA-256-Digest: CK1/FmlpHYHdcudVG4BFBboqMRcHfQ5ok2keHu0HTe4=
+
+Name: assets/www/plugins/cordova-plugin-file/www/Metadata.js
+SHA-256-Digest: +EKuIFIkHX0JT7kCIbLxW4gDWO4pR9MPAFEfejK9QiQ=
+
+Name: assets/www/plugins/cordova-plugin-file/www/ProgressEvent.js
+SHA-256-Digest: 9cgLpX+AZBtxzET9K9bbaF45J43wRemXfjT5GmZ/zbQ=
+
+Name: assets/www/plugins/cordova-plugin-file/www/android/FileSystem.js
+SHA-256-Digest: 9E7kH7W/W9ypMb6vhEHdGLgh+znSjDUAoLcsxP0PXwE=
+
+Name: assets/www/plugins/cordova-plugin-file/www/browser/isChrome.js
+SHA-256-Digest: 7PJ/nYinQhZXLga+/dzFcm/ns7xK3OE57V/MaG+X6UM=
+
+Name: assets/www/plugins/cordova-plugin-file/www/fileSystemPaths.js
+SHA-256-Digest: lHqIRs3XW1+kU8EKVRzYqrMa4afM3+92903Ycde3kak=
+
+Name: assets/www/plugins/cordova-plugin-file/www/fileSystems-roots.js
+SHA-256-Digest: zwkH34Ny8/yC8ak1WSzMZfDRL3LjawPAk7FzGclI+RE=
+
+Name: assets/www/plugins/cordova-plugin-file/www/fileSystems.js
+SHA-256-Digest: TryeStsdmyMA1hjcX4kz83pBp1QhypzZ5PyxXI50L70=
+
+Name: assets/www/plugins/cordova-plugin-file/www/requestFileSystem.js
+SHA-256-Digest: bUkvd2iei+kT8qdaRb6VuPu1BBF+THwUFuaEoxsoyf0=
+
+Name: assets/www/plugins/cordova-plugin-file/www/resolveLocalFileSyste
+ mURI.js
+SHA-256-Digest: Y031t5BPxnznagOngQsJXqZayxhkGeat/Rnc0UNB2NU=
+
+Name: assets/www/plugins/cordova-plugin-inappbrowser/www/inappbrowser.
+ js
+SHA-256-Digest: fZeQwIss62OnKZTvmWEV4PajQFC3pex4v3i/0cKrmFU=
+
+Name: assets/www/plugins/cordova-plugin-statusbar/www/statusbar.js
+SHA-256-Digest: urFDyraNPLLPp/e6TDgAPAb8XbPjsgrIpIl6FSlLEDs=
+
+Name: classes.dex
+SHA-256-Digest: o5IwlXsaYfhURU5kB+ZqdQr3tOu54iIUU51mu9L7diw=
+
+Name: res/mipmap-xhdpi-v4/ic_launcher.png
+SHA-256-Digest: 0UoODn199MzXRBUcYi7jxDqdhiRjOQTC8pwgWqLOmOw=
+
+Name: res/mipmap-xxxhdpi-v4/ic_launcher.png
+SHA-256-Digest: 52Di7gnntapuGzEZvRJG7fDDsTY6F97NaH1V81oeJhs=
+
+Name: res/xml/config.xml
+SHA-256-Digest: 6VND09vbw7WzRUBxXLzcVVNxr0sgiRQw/sGU1U2B9m0=
+
+Name: res/xml/splits0.xml
+SHA-256-Digest: smKrrqDtvBwzctFRYDB+QRvWdalW9D5taEeBQeoVft0=
+
+Name: resources.arsc
+SHA-256-Digest: 8QK++b1CJF6pQUNkMIFsqjfMNcSh3EdcWK2vMv9YzfA=
+
+Name: stamp-cert-sha256
+SHA-256-Digest: L0p4Bm/NGffFWX26fUKi8jlq3aKsfwyEBtSavY6F0c0=
+
