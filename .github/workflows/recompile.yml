@@ -26,15 +26,16 @@ jobs:
           chmod +x apktool
           sudo mv apktool apktool.jar /usr/local/bin/
 
-      - name: Install Android SDK Build Tools
+      - name: Download Android SDK Build Tools (with apksigner)
         run: |
           mkdir -p $HOME/android-sdk/cmdline-tools
-          cd $HOME/android-sdk/cmdline-tools
           wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O sdk-tools.zip
-          unzip sdk-tools.zip -d tools
-          export PATH=$HOME/android-sdk/cmdline-tools/tools/bin:$PATH
-          yes | tools/bin/sdkmanager --sdk_root=$HOME/android-sdk --install "build-tools;34.0.0"
-          echo "$HOME/android-sdk/build-tools/34.0.0" >> $GITHUB_PATH
+          unzip sdk-tools.zip -d $HOME/android-sdk/cmdline-tools/tmp
+          mv $HOME/android-sdk/cmdline-tools/tmp/cmdline-tools $HOME/android-sdk/cmdline-tools/latest
+          echo "$HOME/android-sdk/cmdline-tools/latest/bin" >> $GITHUB_PATH
+          yes | $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=$HOME/android-sdk "build-tools;33.0.0"
+          echo "$HOME/android-sdk/build-tools/33.0.0" >> $GITHUB_PATH
+
 
       - name: Detect APK folder name
         id: detect
