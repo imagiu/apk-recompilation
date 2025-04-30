@@ -13,7 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Set up Java 17 instead of Java 11
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
@@ -49,6 +48,7 @@ jobs:
           echo "folder_name=$folder_name" >> $GITHUB_OUTPUT
           echo "output_apk=${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
           echo "signed_apk=signed-${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
+          echo "idsig_file=signed-${folder_name}_recompiled.apk.idsig" >> $GITHUB_OUTPUT
 
       - name: Check if folder has apktool.yml
         id: check_apktool
@@ -79,17 +79,16 @@ jobs:
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > athena-keystore.jks
 
-      # Sign APK using apksigner
-      - name: Sign APK using apksigner from Build Tools
+      - name: Sign APK using apksigner with v4 signing
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
-          # Ensure apksigner is available via build-tools
-          echo "Signing APK..."
+          echo "Signing APK with v4..."
           $HOME/android-sdk/build-tools/34.0.0/apksigner sign \
             --ks athena-keystore.jks \
             --ks-key-alias ${{ secrets.KEY_ALIAS }} \
             --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
             --key-pass pass:${{ secrets.KEY_PASSWORD }} \
+            --v4-signing-enabled true \
             --out "output/${{ steps.detect.outputs.signed_apk }}" \
             "output/${{ steps.detect.outputs.output_apk }}"
           echo "APK signing complete."
@@ -98,14 +97,16 @@ jobs:
         if: steps.check_apktool.outputs.exists == 'true'
         run: echo "done" > recompile_done.flag
 
-      - name: Push signed APK and flag to repo
+      - name: Push signed APK, idsig, and flag to repo
         if: steps.check_apktool.outputs.exists == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "ATHENA-Bot"
           git config user.email "athena@bot.com"
-          git add output/${{ steps.detect.outputs.signed_apk }} recompile_done.flag || echo "Nothing to add"
-          git commit -m "chore: signed recompiled APK + flag" || echo "Nothing to commit"
+          git add output/${{ steps.detect.outputs.signed_apk }} \
+                  output/${{ steps.detect.outputs.idsig_file }} \
+                  recompile_done.flag || echo "Nothing to add"
+          git commit -m "chore: signed recompiled APK + v4 idsig + flag" || echo "Nothing to commit"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
           git push origin main
