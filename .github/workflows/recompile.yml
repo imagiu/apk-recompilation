@@ -79,15 +79,18 @@ jobs:
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > athena-keystore.jks
 
-      - name: Sign APK using apksigner with v4 signing
+      - name: Sign APK using apksigner with v1 to v4
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
-          echo "Signing APK with v4..."
+          echo "Signing APK with v1, v2, v3, and v4..."
           $HOME/android-sdk/build-tools/34.0.0/apksigner sign \
             --ks athena-keystore.jks \
             --ks-key-alias ${{ secrets.KEY_ALIAS }} \
             --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
             --key-pass pass:${{ secrets.KEY_PASSWORD }} \
+            --v1-signing-enabled true \
+            --v2-signing-enabled true \
+            --v3-signing-enabled true \
             --v4-signing-enabled true \
             --out "output/${{ steps.detect.outputs.signed_apk }}" \
             "output/${{ steps.detect.outputs.output_apk }}"
@@ -107,6 +110,6 @@ jobs:
           git add output/${{ steps.detect.outputs.signed_apk }} \
                   output/${{ steps.detect.outputs.idsig_file }} \
                   recompile_done.flag || echo "Nothing to add"
-          git commit -m "chore: signed recompiled APK + v4 idsig + flag" || echo "Nothing to commit"
+          git commit -m "chore: signed recompiled APK (v1–v4) + v4 idsig + flag" || echo "Nothing to commit"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
           git push origin main
