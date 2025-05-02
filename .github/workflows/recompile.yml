@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout repository
+      - name: 🧾 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java 17
+      - name: ☕ Set up Java 17
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
@@ -26,7 +26,7 @@ jobs:
           chmod +x apktool
           sudo mv apktool apktool.jar /usr/local/bin/
 
-      - name: Download Android SDK Build Tools (with apksigner)
+      - name: 📲 Download Android SDK Build Tools (with apksigner + zipalign)
         run: |
           mkdir -p $HOME/android-sdk/cmdline-tools
           wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O sdk-tools.zip
@@ -44,13 +44,13 @@ jobs:
             echo "No valid folder found for recompilation."
             exit 1
           fi
-          echo "Detected folder: $folder_name"
           echo "folder_name=$folder_name" >> $GITHUB_OUTPUT
           echo "output_apk=${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
+          echo "aligned_apk=aligned-${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
           echo "signed_apk=signed-${folder_name}_recompiled.apk" >> $GITHUB_OUTPUT
           echo "idsig_file=signed-${folder_name}_recompiled.apk.idsig" >> $GITHUB_OUTPUT
 
-      - name: Check if folder has apktool.yml
+      - name: Check for apktool.yml
         id: check_apktool
         run: |
           folder="${{ steps.detect.outputs.folder_name }}"
@@ -63,7 +63,7 @@ jobs:
       - name: Debug folder contents
         run: |
           folder="${{ steps.detect.outputs.folder_name }}"
-          echo "Listing contents of $folder:"
+          echo "Contents of $folder:"
           ls -al "$folder"
 
       - name: Recompile APK
@@ -72,18 +72,25 @@ jobs:
           mkdir -p output
           cd "${{ steps.detect.outputs.folder_name }}"
           apktool b . -o "../output/${{ steps.detect.outputs.output_apk }}"
-          echo "Recompilation complete."
+          echo "APK recompiled successfully."
 
-      - name: Decode keystore
+      - name: Align APK using zipalign
+        if: steps.check_apktool.outputs.exists == 'true'
+        run: |
+          echo "Running zipalign..."
+          zipalign -v -p 4 "output/${{ steps.detect.outputs.output_apk }}" "output/${{ steps.detect.outputs.aligned_apk }}"
+          echo "APK aligned successfully."
+
+      - name: Decode Keystore
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > athena-keystore.jks
 
-      - name: Sign APK using apksigner with v1 to v4
+      - name: Sign APK (v1–v4)
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
-          echo "Signing APK with v1, v2, v3, and v4..."
-          $HOME/android-sdk/build-tools/34.0.0/apksigner sign \
+          echo "Signing aligned APK with all signing versions..."
+          apksigner sign \
             --ks athena-keystore.jks \
             --ks-key-alias ${{ secrets.KEY_ALIAS }} \
             --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
@@ -93,14 +100,10 @@ jobs:
             --v3-signing-enabled true \
             --v4-signing-enabled true \
             --out "output/${{ steps.detect.outputs.signed_apk }}" \
-            "output/${{ steps.detect.outputs.output_apk }}"
+            "output/${{ steps.detect.outputs.aligned_apk }}"
           echo "APK signing complete."
 
-      - name: Create recompile_done.flag
-        if: steps.check_apktool.outputs.exists == 'true'
-        run: echo "done" > recompile_done.flag
-
-      - name: Push signed APK, idsig, and flag to repo
+      - name: Push signed APK, idsig, and flag
         if: steps.check_apktool.outputs.exists == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -110,6 +113,10 @@ jobs:
           git add output/${{ steps.detect.outputs.signed_apk }} \
                   output/${{ steps.detect.outputs.idsig_file }} \
                   recompile_done.flag || echo "Nothing to add"
-          git commit -m "chore: signed recompiled APK (v1–v4) + v4 idsig + flag" || echo "Nothing to commit"
+          git commit -m "chore: signed recompiled APK (v1–v4) + idsig + flag" || echo "Nothing to commit"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
           git push origin main
+
+      - name: Create recompile_done.flag
+        if: steps.check_apktool.outputs.exists == 'true'
+        run: echo "done" > recompile_done.flag
