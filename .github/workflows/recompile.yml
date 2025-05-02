@@ -67,7 +67,6 @@ jobs:
           ls -al "$folder"
 
       - name: Recompile APK
-        id: recompile
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
           mkdir -p output
@@ -76,7 +75,6 @@ jobs:
           echo "APK recompiled successfully."
 
       - name: Align APK using zipalign
-        id: align
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
           echo "Running zipalign..."
@@ -84,13 +82,11 @@ jobs:
           echo "APK aligned successfully."
 
       - name: Decode Keystore
-        id: decode_keystore
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > athena-keystore.jks
 
       - name: Sign APK (v1–v4)
-        id: sign
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
           echo "Signing aligned APK with all signing versions..."
@@ -107,6 +103,10 @@ jobs:
             "output/${{ steps.detect.outputs.aligned_apk }}"
           echo "APK signing complete."
 
+      - name: Create recompile_done.flag
+        if: steps.check_apktool.outputs.exists == 'true'
+        run: echo "done" > recompile_done.flag
+
       - name: Push signed APK, idsig, and flag
         if: steps.check_apktool.outputs.exists == 'true'
         env:
@@ -120,7 +120,3 @@ jobs:
           git commit -m "chore: signed recompiled APK (v1–v4) + idsig + flag" || echo "Nothing to commit"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
           git push origin main
-
-      - name: Create recompile_done.flag
-        if: steps.check_apktool.outputs.exists == 'true' && steps.recompile.outcome == 'success' && steps.align.outcome == 'success' && steps.sign.outcome == 'success'
-        run: echo "done" > recompile_done.flag
