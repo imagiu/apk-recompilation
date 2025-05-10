@@ -1,0 +1,25 @@
+.class public interface abstract Ln1/c7;
+.super Ljava/lang/Object;
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public abstract b()Z
+.end method
+
+.method public abstract c()Z
+.end method
+
+.method public abstract d()Z
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public abstract f()Z
+.end method
+
+.method public abstract m()Z
+.end method

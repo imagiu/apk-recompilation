@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android6546="http://schemas.android.com/apk/res/android">
+    <item android6546:state_pressed="true" android6546:drawable="@drawable/browser_download_press" />
+    <item android6546:state_enabled="false" android6546:drawable="@drawable/browser_download_press" />
+    <item android6546:drawable="@drawable/browser_download_normal" />
+</selector>

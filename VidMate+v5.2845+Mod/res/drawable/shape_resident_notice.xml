@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android2560:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android2560="http://schemas.android.com/apk/res/android">
+    <solid android2560:color="#ffffffff" />
+    <corners android2560:radius="@dimen/dp_4" />
+    <stroke android2560:width="@dimen/dp_1" android2560:color="#ffdfdfdf" />
+</shape>

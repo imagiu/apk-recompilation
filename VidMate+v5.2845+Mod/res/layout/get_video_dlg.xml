@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android304:layout_width="fill_parent" android304:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android304="http://schemas.android.com/apk/res/android">
+    <LinearLayout android304:orientation="vertical" android304:layout_width="fill_parent" android304:layout_height="fill_parent">
+        <FrameLayout android304:id="@id/fl_web_container" android304:layout_width="fill_parent" android304:layout_height="wrap_content" android304:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

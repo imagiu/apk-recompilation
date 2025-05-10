@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android1055:id="@id/lay_root" android1055:background="#ffffffff" android1055:layout_width="fill_parent" android1055:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android1055="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android1055:id="@id/llyt_notify_left" android1055:layout_width="120.0dip" android1055:layout_height="90.0dip" android1055:layout_alignParentLeft="true" android1055:layout_centerVertical="true" android1055:layout_alignParentStart="true">
+        <ImageView android1055:id="@id/iv_notify_image" android1055:layout_width="fill_parent" android1055:layout_height="fill_parent" android1055:scaleType="centerCrop" />
+        <ImageView android1055:id="@id/iv_notify_play" android1055:visibility="gone" android1055:layout_width="42.0dip" android1055:layout_height="42.0dip" android1055:src="@drawable/player_play" android1055:layout_centerInParent="true" />
+        <ImageView android1055:visibility="visible" android1055:layout_width="15.0dip" android1055:layout_height="15.0dip" android1055:src="@drawable/aaaa_notification_push" android1055:layout_alignParentRight="true" android1055:layout_alignParentBottom="true" android1055:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android1055:orientation="vertical" android1055:layout_width="fill_parent" android1055:layout_height="wrap_content" android1055:layout_marginLeft="10.0dip" android1055:layout_marginRight="31.5dip" android1055:layout_toRightOf="@id/llyt_notify_left" android1055:layout_centerVertical="true" android1055:layout_marginStart="10.0dip" android1055:layout_marginEnd="31.5dip" android1055:layout_toEndOf="@id/llyt_notify_left">
+        <TextView android1055:textSize="14.0sp" android1055:textColor="#ff343434" android1055:ellipsize="end" android1055:id="@id/tv_notify_title" android1055:layout_width="wrap_content" android1055:layout_height="wrap_content" android1055:text="" android1055:maxLines="2" android1055:minLines="1" />
+        <TextView android1055:textSize="12.0sp" android1055:textColor="#ff9e9e9e" android1055:ellipsize="end" android1055:id="@id/tv_notify_msg" android1055:layout_width="wrap_content" android1055:layout_height="fill_parent" android1055:layout_marginTop="2.0dip" android1055:text="" android1055:maxLines="3" />
+    </LinearLayout>
+</RelativeLayout>

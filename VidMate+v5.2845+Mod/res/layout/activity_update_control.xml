@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android3149:layout_width="fill_parent" android3149:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android3149="http://schemas.android.com/apk/res/android">
+    <Button android3149:id="@id/backBtn" android3149:layout_width="wrap_content" android3149:layout_height="wrap_content" android3149:text="返回" android3149:layout_alignParentLeft="true" android3149:layout_alignParentTop="true" android3149:onClick="onClick" />
+    <ScrollView android3149:id="@id/displayLayout" android3149:layout_width="fill_parent" android3149:layout_height="wrap_content" android3149:layout_above="@id/controlLayout" android3149:layout_below="@id/backBtn">
+        <TextView android3149:id="@id/textView" android3149:scrollbars="vertical" android3149:layout_width="fill_parent" android3149:layout_height="wrap_content" />
+    </ScrollView>
+    <LinearLayout android3149:orientation="vertical" android3149:id="@id/controlLayout" android3149:layout_width="fill_parent" android3149:layout_height="wrap_content" android3149:minHeight="120.0dip" android3149:layout_alignParentBottom="true">
+        <LinearLayout android3149:layout_width="fill_parent" android3149:layout_height="wrap_content">
+            <Button android3149:id="@id/rollbackBtn" android3149:layout_width="wrap_content" android3149:layout_height="wrap_content" android3149:text="触发回滚（会杀死当前进程）" android3149:onClick="onClick" />
+            <Button android3149:id="@id/checkUpdateBtn" android3149:layout_width="wrap_content" android3149:layout_height="wrap_content" android3149:text="检查更新" android3149:onClick="onClick" />
+            <Button android3149:id="@id/showFileInfoBtn" android3149:layout_width="wrap_content" android3149:layout_height="wrap_content" android3149:text="显示文件信息" android3149:onClick="onClick" />
+        </LinearLayout>
+        <LinearLayout android3149:layout_width="fill_parent" android3149:layout_height="wrap_content">
+            <Button android3149:id="@id/checkUpdateInPlugin" android3149:layout_width="wrap_content" android3149:layout_height="wrap_content" android3149:text="检查更新（增量）" android3149:onClick="onClick" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

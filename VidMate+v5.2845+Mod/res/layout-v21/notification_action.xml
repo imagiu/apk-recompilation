@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android7423:orientation="horizontal" android7423:id="@id/action_container" android7423:layout_width="0.0dip" android7423:layout_height="48.0dip" android7423:layout_weight="1.0" android7423:paddingStart="4.0dip" style="@style/Widget.Compat.NotificationActionContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android7423="http://schemas.android.com/apk/res/android">
+    <ImageView android7423:layout_gravity="start|center" android7423:id="@id/action_image" android7423:layout_width="@dimen/notification_action_icon_size" android7423:layout_height="@dimen/notification_action_icon_size" android7423:scaleType="centerInside" />
+    <TextView android7423:ellipsize="end" android7423:layout_gravity="start|center" android7423:id="@id/action_text" android7423:clickable="false" android7423:layout_width="wrap_content" android7423:layout_height="wrap_content" android7423:singleLine="true" android7423:paddingStart="4.0dip" style="@style/Widget.Compat.NotificationActionText" />
+</LinearLayout>

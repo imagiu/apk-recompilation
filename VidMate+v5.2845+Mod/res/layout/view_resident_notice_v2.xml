@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android2914:orientation="horizontal" android2914:layout_width="fill_parent" android2914:layout_height="wrap_content" android2914:layout_marginTop="12.0dip" android2914:layout_marginStart="18.0dip" android2914:layout_marginEnd="18.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android2914="http://schemas.android.com/apk/res/android">
+    <LinearLayout android2914:gravity="center" android2914:orientation="vertical" android2914:id="@id/l_l_1" android2914:clickable="true" android2914:layout_width="0.0dip" android2914:layout_height="wrap_content" android2914:layout_weight="1.0">
+        <ImageView android2914:id="@id/iv1" android2914:layout_width="26.0dip" android2914:layout_height="26.0dip" />
+        <TextView android2914:textSize="12.0sp" android2914:textColor="#e6282828" android2914:gravity="center_horizontal" android2914:id="@id/tv1" android2914:layout_width="wrap_content" android2914:layout_height="wrap_content" android2914:layout_marginTop="2.0dip" />
+        <ImageView android2914:id="@id/p1" android2914:layout_width="1.0px" android2914:layout_height="1.0px" android2914:layout_marginTop="12.0dip" />
+    </LinearLayout>
+    <LinearLayout android2914:gravity="center" android2914:orientation="vertical" android2914:id="@id/l_l_2" android2914:clickable="true" android2914:layout_width="0.0dip" android2914:layout_height="wrap_content" android2914:layout_weight="1.0">
+        <ImageView android2914:id="@id/iv2" android2914:layout_width="26.0dip" android2914:layout_height="26.0dip" />
+        <TextView android2914:textSize="12.0sp" android2914:textColor="#e6282828" android2914:gravity="center_horizontal" android2914:id="@id/tv2" android2914:layout_width="wrap_content" android2914:layout_height="wrap_content" android2914:layout_marginTop="2.0dip" />
+        <ImageView android2914:id="@id/p2" android2914:layout_width="1.0px" android2914:layout_height="1.0px" android2914:layout_marginTop="12.0dip" />
+    </LinearLayout>
+    <LinearLayout android2914:gravity="center" android2914:orientation="vertical" android2914:id="@id/l_l_3" android2914:clickable="true" android2914:layout_width="0.0dip" android2914:layout_height="wrap_content" android2914:layout_weight="1.0">
+        <ImageView android2914:id="@id/iv3" android2914:layout_width="26.0dip" android2914:layout_height="26.0dip" />
+        <TextView android2914:textSize="12.0sp" android2914:textColor="#e6282828" android2914:gravity="center_horizontal" android2914:id="@id/tv3" android2914:layout_width="wrap_content" android2914:layout_height="wrap_content" android2914:layout_marginTop="2.0dip" />
+        <ImageView android2914:id="@id/p3" android2914:layout_width="1.0px" android2914:layout_height="1.0px" android2914:layout_marginTop="12.0dip" />
+    </LinearLayout>
+    <LinearLayout android2914:gravity="center" android2914:orientation="vertical" android2914:id="@id/l_l_4" android2914:clickable="true" android2914:layout_width="0.0dip" android2914:layout_height="wrap_content" android2914:layout_weight="1.0">
+        <ImageView android2914:id="@id/iv4" android2914:layout_width="26.0dip" android2914:layout_height="26.0dip" />
+        <TextView android2914:textSize="12.0sp" android2914:textColor="#e6282828" android2914:gravity="center_horizontal" android2914:id="@id/tv4" android2914:layout_width="wrap_content" android2914:layout_height="wrap_content" android2914:layout_marginTop="2.0dip" />
+        <ImageView android2914:id="@id/p4" android2914:layout_width="1.0px" android2914:layout_height="1.0px" android2914:layout_marginTop="12.0dip" />
+    </LinearLayout>
+    <LinearLayout android2914:gravity="center" android2914:orientation="vertical" android2914:id="@id/l_l_5" android2914:clickable="true" android2914:layout_width="0.0dip" android2914:layout_height="wrap_content" android2914:layout_weight="1.0">
+        <ImageView android2914:id="@id/iv5" android2914:layout_width="26.0dip" android2914:layout_height="26.0dip" />
+        <TextView android2914:textSize="12.0sp" android2914:textColor="#e6282828" android2914:gravity="center_horizontal" android2914:id="@id/tv5" android2914:layout_width="wrap_content" android2914:layout_height="wrap_content" android2914:layout_marginTop="2.0dip" />
+        <ImageView android2914:id="@id/p5" android2914:layout_width="1.0px" android2914:layout_height="1.0px" android2914:layout_marginTop="12.0dip" />
+    </LinearLayout>
+</LinearLayout>

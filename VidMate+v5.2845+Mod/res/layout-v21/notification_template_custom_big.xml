@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android3753:id="@id/notification_background" android3753:layout_width="fill_parent" android3753:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android3753="http://schemas.android.com/apk/res/android">
+    <include android3753:layout_width="@dimen/notification_large_icon_width" android3753:layout_height="@dimen/notification_large_icon_height" layout="@layout/notification_template_icon_group" />
+    <LinearLayout android3753:layout_gravity="top" android3753:orientation="vertical" android3753:layout_width="fill_parent" android3753:layout_height="wrap_content" android3753:layout_marginStart="@dimen/notification_large_icon_width">
+        <LinearLayout android3753:orientation="horizontal" android3753:id="@id/notification_main_column_container" android3753:layout_width="fill_parent" android3753:layout_height="wrap_content" android3753:minHeight="@dimen/notification_large_icon_height">
+            <FrameLayout android3753:id="@id/notification_main_column" android3753:layout_width="fill_parent" android3753:layout_height="wrap_content" android3753:layout_marginBottom="8.0dip" android3753:layout_weight="1.0" android3753:layout_marginEnd="8.0dip" />
+            <FrameLayout android3753:id="@id/right_side" android3753:paddingTop="@dimen/notification_right_side_padding_top" android3753:layout_width="wrap_content" android3753:layout_height="wrap_content" android3753:layout_marginEnd="8.0dip">
+                <ViewStub android3753:layout_gravity="end|center|top" android3753:id="@id/time" android3753:visibility="gone" android3753:layout="@layout/notification_template_part_time" android3753:layout_width="wrap_content" android3753:layout_height="wrap_content" />
+                <ViewStub android3753:layout_gravity="end|center|top" android3753:id="@id/chronometer" android3753:visibility="gone" android3753:layout="@layout/notification_template_part_chronometer" android3753:layout_width="wrap_content" android3753:layout_height="wrap_content" />
+                <TextView android3753:textAppearance="@style/TextAppearance.Compat.Notification.Info" android3753:layout_gravity="end|bottom|center" android3753:id="@id/info" android3753:layout_width="wrap_content" android3753:layout_height="wrap_content" android3753:layout_marginTop="20.0dip" android3753:singleLine="true" />
+            </FrameLayout>
+        </LinearLayout>
+        <ImageView android3753:id="@id/action_divider" android3753:background="#29000000" android3753:visibility="gone" android3753:layout_width="fill_parent" android3753:layout_height="1.0dip" />
+        <LinearLayout android3753:orientation="horizontal" android3753:id="@id/actions" android3753:visibility="gone" android3753:layout_width="fill_parent" android3753:layout_height="wrap_content" android3753:layout_marginStart="-8.0dip" />
+    </LinearLayout>
+</FrameLayout>

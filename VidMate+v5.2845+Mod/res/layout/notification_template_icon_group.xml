@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView android8300:id="@id/icon" android8300:layout_width="@dimen/notification_large_icon_width" android8300:layout_height="@dimen/notification_large_icon_height" android8300:scaleType="centerCrop"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android8300="http://schemas.android.com/apk/res/android" />

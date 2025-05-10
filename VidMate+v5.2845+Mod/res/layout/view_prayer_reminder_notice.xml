@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android5321:gravity="center_vertical" android5321:background="@color/white" android5321:paddingTop="@dimen/dp_8" android5321:paddingBottom="@dimen/dp_8" android5321:layout_width="fill_parent" android5321:layout_height="wrap_content" android5321:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android5321="http://schemas.android.com/apk/res/android">
+    <ImageView android5321:id="@id/iv_icon" android5321:layout_width="@dimen/dp_48" android5321:layout_height="@dimen/dp_48" android5321:layout_marginLeft="@dimen/dp_12" android5321:src="@drawable/ic_launcher" android5321:scaleType="centerCrop" android5321:layout_alignParentLeft="true" android5321:layout_marginStart="@dimen/dp_12" android5321:layout_alignParentStart="true" />
+    <RelativeLayout android5321:gravity="center_vertical" android5321:layout_width="fill_parent" android5321:layout_height="@dimen/dp_48" android5321:layout_marginLeft="64.0dip" android5321:layout_marginRight="@dimen/dp_8" android5321:layout_alignLeft="@id/iv_icon" android5321:layout_marginStart="64.0dip" android5321:layout_marginEnd="@dimen/dp_8" android5321:layout_alignStart="@id/iv_icon">
+        <RelativeLayout android5321:gravity="center_vertical" android5321:id="@id/rl_top" android5321:layout_width="fill_parent" android5321:layout_height="wrap_content">
+            <TextView android5321:textSize="14.0sp" android5321:textStyle="bold" android5321:textColor="@color/color_212121" android5321:id="@id/tv_title" android5321:layout_width="wrap_content" android5321:layout_height="wrap_content" android5321:layout_alignParentLeft="true" android5321:layout_centerVertical="true" android5321:layout_alignParentStart="true" />
+            <TextView android5321:textSize="12.0sp" android5321:textColor="@color/color_B2B2B2" android5321:id="@id/tv_time" android5321:layout_width="wrap_content" android5321:layout_height="wrap_content" android5321:layout_alignParentRight="true" android5321:layout_centerVertical="true" android5321:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android5321:gravity="center_vertical" android5321:layout_width="fill_parent" android5321:layout_height="wrap_content" android5321:layout_below="@id/rl_top">
+            <TextView android5321:textSize="12.0sp" android5321:textColor="@color/color_757575" android5321:ellipsize="end" android5321:id="@id/tv_content" android5321:layout_width="wrap_content" android5321:layout_height="wrap_content" android5321:singleLine="true" android5321:layout_centerVertical="true" />
+            <ImageView android5321:id="@id/iv_more" android5321:layout_width="@dimen/dp_24" android5321:layout_height="@dimen/dp_24" android5321:src="@drawable/ic_notify_more_v1" android5321:layout_alignParentRight="true" android5321:layout_centerVertical="true" android5321:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android9152:background="#ffffffff" android9152:layout_width="fill_parent" android9152:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android9152="http://schemas.android.com/apk/res/android">
+    <ImageView android9152:id="@id/iv_music_img" android9152:layout_width="64.0dip" android9152:layout_height="64.0dip" android9152:layout_marginRight="5.0dip" android9152:src="@drawable/image_default_musicplayer" android9152:layout_alignParentLeft="true" android9152:layout_marginEnd="5.0dip" android9152:layout_alignParentStart="true" />
+    <ImageView android9152:layout_width="14.0dip" android9152:layout_height="14.0dip" android9152:src="@drawable/ic_launcher" android9152:scaleType="fitXY" android9152:layout_alignRight="@id/iv_music_img" android9152:layout_alignBottom="@id/iv_music_img" android9152:layout_alignEnd="@id/iv_music_img" />
+    <LinearLayout android9152:orientation="vertical" android9152:id="@id/ll_music_playing_info" android9152:layout_width="fill_parent" android9152:layout_height="wrap_content" android9152:layout_marginLeft="12.0dip" android9152:layout_marginRight="12.0dip" android9152:layout_toRightOf="@id/iv_music_img" android9152:layout_centerVertical="true" android9152:layout_marginStart="12.0dip" android9152:layout_marginEnd="12.0dip" android9152:layout_toEndOf="@id/iv_music_img">
+        <TextView android9152:textSize="14.0sp" android9152:textColor="#ff343434" android9152:ellipsize="marquee" android9152:id="@id/tv_music_name" android9152:layout_width="fill_parent" android9152:layout_height="wrap_content" android9152:text="Music Name" android9152:singleLine="true" android9152:marqueeRepeatLimit="marquee_forever" />
+        <TextView android9152:textSize="12.0sp" android9152:textColor="#ff999999" android9152:ellipsize="marquee" android9152:id="@id/tv_artist_name" android9152:visibility="gone" android9152:layout_width="fill_parent" android9152:layout_height="wrap_content" android9152:layout_marginTop="3.0dip" android9152:text="Artist Name" android9152:singleLine="true" android9152:marqueeRepeatLimit="marquee_forever" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android207:id="@id/icon_group" android207:layout_width="@dimen/notification_large_icon_width" android207:layout_height="@dimen/notification_large_icon_height"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android207="http://schemas.android.com/apk/res/android">
+    <ImageView android207:id="@id/icon" android207:layout_width="fill_parent" android207:layout_height="fill_parent" android207:layout_marginTop="@dimen/notification_big_circle_margin" android207:layout_marginBottom="@dimen/notification_big_circle_margin" android207:scaleType="centerInside" android207:layout_marginStart="@dimen/notification_big_circle_margin" android207:layout_marginEnd="@dimen/notification_big_circle_margin" />
+    <ImageView android207:layout_gravity="end|bottom|center" android207:id="@id/right_icon" android207:visibility="gone" android207:layout_width="@dimen/notification_right_icon_size" android207:layout_height="@dimen/notification_right_icon_size" android207:layout_marginBottom="8.0dip" android207:scaleType="centerInside" android207:layout_marginEnd="8.0dip" />
+</FrameLayout>

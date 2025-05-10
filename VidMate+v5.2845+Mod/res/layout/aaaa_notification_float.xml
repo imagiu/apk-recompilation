@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android5918:id="@id/lay_root" android5918:background="#ffffffff" android5918:clickable="true" android5918:layout_width="fill_parent" android5918:layout_height="wrap_content" android5918:layout_margin="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android5918="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android5918:id="@id/llyt_notify_left" android5918:layout_width="86.0dip" android5918:layout_height="64.0dip" android5918:layout_alignParentLeft="true" android5918:layout_centerVertical="true" android5918:layout_alignParentStart="true">
+        <ImageView android5918:id="@id/iv_notify_image" android5918:layout_width="fill_parent" android5918:layout_height="fill_parent" android5918:scaleType="centerCrop" />
+        <ImageView android5918:id="@id/iv_notify_play" android5918:visibility="gone" android5918:layout_width="36.0dip" android5918:layout_height="36.0dip" android5918:src="@drawable/player_play" android5918:layout_centerInParent="true" />
+        <ImageView android5918:visibility="visible" android5918:layout_width="15.0dip" android5918:layout_height="15.0dip" android5918:src="@drawable/aaaa_notification_push" android5918:layout_alignParentRight="true" android5918:layout_alignParentBottom="true" android5918:rotationY="@integer/angle_rtl_180" android5918:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android5918:orientation="vertical" android5918:layout_width="fill_parent" android5918:layout_height="wrap_content" android5918:layout_marginLeft="10.0dip" android5918:layout_marginRight="6.0dip" android5918:layout_toRightOf="@id/llyt_notify_left" android5918:layout_centerVertical="true" android5918:layout_marginStart="10.0dip" android5918:layout_marginEnd="6.0dip" android5918:layout_toEndOf="@id/llyt_notify_left">
+        <TextView android5918:textSize="14.0sp" android5918:textColor="#ff343434" android5918:ellipsize="end" android5918:id="@id/tv_notify_title" android5918:layout_width="wrap_content" android5918:layout_height="wrap_content" android5918:text="" android5918:singleLine="true" />
+        <TextView android5918:textSize="12.0sp" android5918:textColor="#ff9e9e9e" android5918:ellipsize="end" android5918:id="@id/tv_notify_msg" android5918:visibility="gone" android5918:layout_width="wrap_content" android5918:layout_height="wrap_content" android5918:layout_marginTop="2.0dip" android5918:text="" android5918:maxLines="2" />
+    </LinearLayout>
+</RelativeLayout>

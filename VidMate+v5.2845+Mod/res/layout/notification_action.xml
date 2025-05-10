@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android1869:orientation="horizontal" android1869:id="@id/action_container" android1869:paddingLeft="4.0dip" android1869:layout_width="0.0dip" android1869:layout_height="48.0dip" android1869:layout_weight="1.0" android1869:paddingStart="4.0dip" style="@style/Widget.Compat.NotificationActionContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android1869="http://schemas.android.com/apk/res/android">
+    <ImageView android1869:layout_gravity="start|center" android1869:id="@id/action_image" android1869:layout_width="@dimen/notification_action_icon_size" android1869:layout_height="@dimen/notification_action_icon_size" android1869:scaleType="centerInside" />
+    <TextView android1869:textColor="#ffcccccc" android1869:ellipsize="end" android1869:layout_gravity="start|center" android1869:id="@id/action_text" android1869:paddingLeft="4.0dip" android1869:clickable="false" android1869:layout_width="wrap_content" android1869:layout_height="wrap_content" android1869:singleLine="true" android1869:paddingStart="4.0dip" style="@style/Widget.Compat.NotificationActionText" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android6617="http://schemas.android.com/apk/res/android">
+    <item android6617:state_pressed="true" android6617:drawable="@drawable/music_player_notification_forward_press" />
+    <item android6617:drawable="@drawable/music_player_notification_forward" />
+</selector>

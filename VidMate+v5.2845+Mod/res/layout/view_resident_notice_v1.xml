@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android6796:gravity="center_vertical" android6796:orientation="vertical" android6796:background="@android:color/white" android6796:layout_width="fill_parent" android6796:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android6796="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android6796:id="@id/laySearch" android6796:background="@drawable/shape_resident_notice" android6796:layout_width="fill_parent" android6796:layout_height="30.0dip" android6796:layout_marginLeft="18.0dip" android6796:layout_marginTop="7.0dip" android6796:layout_marginRight="18.0dip" android6796:layout_marginStart="18.0dip" android6796:layout_marginEnd="18.0dip">
+        <ImageView android6796:id="@id/iv_search" android6796:layout_width="14.0dip" android6796:layout_height="14.0dip" android6796:layout_marginLeft="14.0dip" android6796:src="@drawable/ic_launcher" android6796:layout_alignParentLeft="true" android6796:layout_centerVertical="true" android6796:layout_marginStart="14.0dip" android6796:layout_alignParentStart="true" />
+        <TextView android6796:textSize="12.0sp" android6796:textColor="#ff7c7c7c" android6796:ellipsize="end" android6796:gravity="center_vertical" android6796:id="@id/tvSearch" android6796:layout_width="wrap_content" android6796:layout_height="wrap_content" android6796:layout_marginLeft="8.0dip" android6796:text="@string/download_video_and_music" android6796:singleLine="true" android6796:layout_toRightOf="@id/iv_search" android6796:layout_centerVertical="true" android6796:layout_marginStart="8.0dip" android6796:layout_toEndOf="@id/iv_search" />
+        <ImageView android6796:id="@id/iv_more" android6796:layout_width="@dimen/dp_24" android6796:layout_height="@dimen/dp_24" android6796:layout_marginRight="@dimen/dp_8" android6796:src="@drawable/ic_notify_more" android6796:layout_centerVertical="true" android6796:layout_marginEnd="@dimen/dp_8" android6796:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android6796:orientation="horizontal" android6796:paddingBottom="4.0dip" android6796:layout_width="fill_parent" android6796:layout_height="wrap_content" android6796:layout_marginTop="8.0dip" android6796:layout_marginStart="18.0dip" android6796:layout_marginEnd="18.0dip">
+        <LinearLayout android6796:gravity="center" android6796:orientation="vertical" android6796:id="@id/l_l_1" android6796:clickable="true" android6796:layout_width="0.0dip" android6796:layout_height="wrap_content" android6796:layout_weight="1.0">
+            <ImageView android6796:id="@id/iv1" android6796:layout_width="26.0dip" android6796:layout_height="26.0dip" />
+            <TextView android6796:textSize="12.0sp" android6796:textColor="#e6282828" android6796:gravity="center_horizontal" android6796:id="@id/tv1" android6796:layout_width="wrap_content" android6796:layout_height="wrap_content" android6796:layout_marginTop="2.0dip" android6796:text="@string/hot_music" />
+        </LinearLayout>
+        <LinearLayout android6796:gravity="center" android6796:orientation="vertical" android6796:id="@id/l_l_2" android6796:clickable="true" android6796:layout_width="0.0dip" android6796:layout_height="wrap_content" android6796:layout_weight="1.0">
+            <ImageView android6796:id="@id/iv2" android6796:layout_width="26.0dip" android6796:layout_height="26.0dip" />
+            <TextView android6796:textSize="12.0sp" android6796:textColor="#e6282828" android6796:gravity="center_horizontal" android6796:id="@id/tv2" android6796:layout_width="wrap_content" android6796:layout_height="wrap_content" android6796:layout_marginTop="2.0dip" android6796:text="@string/trending" />
+        </LinearLayout>
+        <LinearLayout android6796:gravity="center" android6796:orientation="vertical" android6796:id="@id/l_l_3" android6796:clickable="true" android6796:layout_width="0.0dip" android6796:layout_height="wrap_content" android6796:layout_weight="1.0">
+            <ImageView android6796:id="@id/iv3" android6796:layout_width="26.0dip" android6796:layout_height="26.0dip" />
+            <TextView android6796:textSize="12.0sp" android6796:textColor="#e6282828" android6796:gravity="center_horizontal" android6796:id="@id/tv3" android6796:layout_width="wrap_content" android6796:layout_height="wrap_content" android6796:layout_marginTop="2.0dip" android6796:text="@string/my_files" />
+        </LinearLayout>
+        <LinearLayout android6796:gravity="center" android6796:orientation="vertical" android6796:id="@id/l_l_4" android6796:clickable="true" android6796:layout_width="0.0dip" android6796:layout_height="wrap_content" android6796:layout_weight="1.0">
+            <ImageView android6796:id="@id/iv4" android6796:layout_width="26.0dip" android6796:layout_height="26.0dip" />
+            <TextView android6796:textSize="12.0sp" android6796:textColor="#e6282828" android6796:gravity="center_horizontal" android6796:id="@id/tv4" android6796:layout_width="wrap_content" android6796:layout_height="wrap_content" android6796:layout_marginTop="2.0dip" android6796:text="@string/notify_sites" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

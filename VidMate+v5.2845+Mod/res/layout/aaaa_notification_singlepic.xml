@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android7704:id="@id/lay_root" android7704:background="#ffffffff" android7704:layout_width="fill_parent" android7704:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android7704="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android7704:id="@id/llyt_notify_left" android7704:layout_width="86.0dip" android7704:layout_height="64.0dip" android7704:layout_alignParentLeft="true" android7704:layout_centerVertical="true" android7704:layout_alignParentStart="true">
+        <ImageView android7704:id="@id/iv_notify_image" android7704:layout_width="fill_parent" android7704:layout_height="fill_parent" android7704:scaleType="centerCrop" />
+        <ImageView android7704:id="@id/iv_notify_play" android7704:visibility="gone" android7704:layout_width="36.0dip" android7704:layout_height="36.0dip" android7704:src="@drawable/player_play" android7704:layout_centerInParent="true" />
+        <ImageView android7704:visibility="visible" android7704:layout_width="15.0dip" android7704:layout_height="15.0dip" android7704:src="@drawable/aaaa_notification_push" android7704:layout_alignParentRight="true" android7704:layout_alignParentBottom="true" android7704:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android7704:orientation="vertical" android7704:layout_width="fill_parent" android7704:layout_height="wrap_content" android7704:layout_marginLeft="10.0dip" android7704:layout_marginRight="6.0dip" android7704:layout_toRightOf="@id/llyt_notify_left" android7704:layout_centerVertical="true" android7704:layout_marginStart="10.0dip" android7704:layout_marginEnd="6.0dip" android7704:layout_toEndOf="@id/llyt_notify_left">
+        <TextView android7704:textSize="14.0sp" android7704:textColor="#ff343434" android7704:ellipsize="end" android7704:id="@id/tv_notify_title" android7704:layout_width="wrap_content" android7704:layout_height="wrap_content" android7704:text="" android7704:singleLine="true" />
+        <TextView android7704:textSize="12.0sp" android7704:textColor="#ff9e9e9e" android7704:ellipsize="end" android7704:id="@id/tv_notify_msg" android7704:layout_width="wrap_content" android7704:layout_height="wrap_content" android7704:layout_marginTop="2.0dip" android7704:text="" android7704:maxLines="2" />
+    </LinearLayout>
+</RelativeLayout>

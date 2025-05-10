@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android9387:gravity="center" android9387:orientation="vertical" android9387:layout_width="fill_parent" android9387:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:android9387="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android9387:id="@id/tv_notification_title" android9387:layout_width="wrap_content" android9387:layout_height="wrap_content" />
+</LinearLayout>
