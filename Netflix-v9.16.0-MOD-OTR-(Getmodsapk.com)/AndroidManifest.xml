@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" android:installLocation="preferExternal" package="app.netmirror.netmirrortv" platformBuildVersionCode="25" platformBuildVersionName="7.1.0">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.software.leanback" android:required="true"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:icon="@ac/__launcher_icon" android:label="Netflix" android:roundIcon="@ac/__launcher_icon" android:supportsRtl="true" android:testOnly="false" android:theme="@style/Theme.NetMirrorTV">
+        <activity android:banner="@mipmap/ic_banner_foreground" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:icon="@ac/__launcher_icon" android:label="Netflix" android:logo="@mipmap/ic_banner_foreground" android:name="app.netmirror.netmirrortv.MainActivity" android:resizeableActivity="true" android:roundIcon="@ac/__launcher_icon" android:screenOrientation="sensor" android:supportsPictureInPicture="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="app.netmirror.netmirrortv.DetailsActivity" android:resizeableActivity="true" android:screenOrientation="sensor" android:supportsPictureInPicture="true"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="app.netmirror.netmirrortv.PlaybackActivity" android:resizeableActivity="true" android:screenOrientation="sensor" android:supportsPictureInPicture="true"/>
+        <meta-data android:name="com.encdata.Teamxpros.name" android:value="Netflix"/>
+        <meta-data android:name="com.encdata.Teamxpros.originalName" android:value="NetMirrorTV"/>
+        <meta-data android:name="com.encdata.Teamxpros.originalPackageName" android:value="YXBwLm5ldG1pcnJvci5uZXRtaXJyb3J0dg=="/>
+        <meta-data android:name="com.encdata.Teamxpros.cloneNumber" android:value="-1"/>
+        <meta-data android:name="com.encdata.Teamxpros.cloneSource" android:value="apk_file"/>
+        <meta-data android:name="com.encdata.Teamxpros.cloneTimestamp" android:value="\ 1738523469174"/>
+        <meta-data android:name="com.encdata.Teamxpros.cloneBuildSerial" android:value="6f591811a5bc13d4"/>
+        <meta-data android:name="com.encdata.Teamxpros.cloneBuildManufacturer" android:value="vivo"/>
+        <meta-data android:name="com.encdata.Teamxpros.cloneBuildModel" android:value="V2050"/>
+        <meta-data android:name="com.encdata.Teamxpros.clonePremiumVersion" android:value="true"/>
+        <meta-data android:name="com.encdata.Teamxpros.forceDeviceLock" android:value="false"/>
+        <meta-data android:name="com.encdata.Teamxpros.runtimeModdingOptions" android:value="true"/>
+        <meta-data android:name="com.encdata.Teamxpros.bundleOriginalApp" android:value="false"/>
+        <meta-data android:name="com.encdata.Teamxpros.versionCode" android:value="1"/>
+        <meta-data android:name="com.encdata.Teamxpros.versionName" android:value="1.0"/>
+        <meta-data android:name="com.encdata.Teamxpros.appClonerVersionCode" android:value="10"/>
+        <meta-data android:name="com.encdata.Teamxpros.appClonerVersionName" android:value="1.0"/>
+        <meta-data android:name="com.encdata.Teamxpros.appClonerClassesVersionCode" android:value="20190829"/>
+        <meta-data android:name="com.encdata.Teamxpros.originalSignatures" android:value="AQAAABwAAABhAG4AZAByAG8AaQBkAC4AYwBvAG4AdABlAG4AdAAuAHAAbQAuAFMAaQBnAG4AYQB0AHUAcgBlAAAAAADoAgAAMIIC5DCCAcwCAQEwDQYJKoZIhvcNAQELBQAwNzEWMBQGA1UEAwwNQW5kcm9pZCBEZWJ1ZzEQMA4GA1UECgwHQW5kcm9pZDELMAkGA1UEBhMCVVMwIBcNMjQwOTEwMTMwMjEyWhgPMjA1NDA5MDMxMzAyMTJaMDcxFjAUBgNVBAMMDUFuZHJvaWQgRGVidWcxEDAOBgNVBAoMB0FuZHJvaWQxCzAJBgNVBAYTAlVTMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApA7tGefzc5yWJAX1QsIn6Gajd0E0iyA+8dUoxVtNbyjtXlqFfk7B4p9sFPV5UlryFwbq8UYKhrQPiNgGMluLHaODINm5rinhvBS14tIysqSBGs+VKbdtFTE1iuQVVmc8KWjQbjnHXaZ+woWVyWltSXuSvNAAhW4z3XaamvF6olmcWqM0Rvcc9Nop51vzsUL8trA+4UA3AcREDhKDR7LlBh38CL+T1u1KsS3VW3mnVACtgEpmMoyC9ebjazqjkFymglgBiZm76Fkfuq0Im1rranTddr6NV7rXvbeMGPO9OKGSziswyo2xKd6I+RG4c4P9ihr5VqSWUHy/ZsFl371RXQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCJtDfTktH3UnFNtniGUBivQkLNXOtcw6I43O0YXnw4GsWZnGpLx50CSLGDhLwjDf5uASRW8lGUUcm/DmXsYK8wUdzOJ4uVWVJxSJBwcJmU3cbUAU3QQW7jrAcy9Azfrpo3ZC2APSq/kfFLPeDreHcHZSkw8OQ+dY7L79UjavAI0WQnlW0uijCa5XqTRCDgSBozcVsBJAQFHQI8N6IDOU1zolHL7Ne2nQnbZjgaA4ZvBQKL2llHyhl/tpPzahEk9mvKyp1dAY5ZW0wydLjS0/6a1I5ge652H4hSek/+ku9X2GfUV29R3kDroQ675R3HUJw2ccZResw5ceGyl42DF5mI"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+        <provider android:authorities="app.netmirror.netmirrortv.com.encdata.Teamxpros.classes.DefaultProvider" android:exported="true" android:initOrder="2147483647" android:name="com.encdata.Teamxpros.classes.DefaultProvider"/>
+        <service android:exported="true" android:name="com.encdata.Teamxpros.service.RemoteService"/>
+        <receiver android:exported="true" android:name="com.encdata.Teamxpros.classes.DefaultProvider$DefaultReceiver"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.encdata.Teamxpros.classes.DefaultProvider$MyActivity" android:resizeableActivity="true" android:screenOrientation="sensor" android:supportsPictureInPicture="true"/>
+        <receiver android:name="com.encdata.Teamxpros.classes.DisableClipboardAccess$ClearClipboardReceiver"/>
+        <receiver android:name="com.encdata.Teamxpros.classes.FakeCamera$FakeCameraReceiver">
+            <intent-filter>
+                <action android:name="com.encdata.Teamxpros.action.FAKE_CAMERA_SELECT_CAMERA_PICTURE"/>
+                <action android:name="com.encdata.Teamxpros.action.FAKE_CAMERA_ROTATE_CLOCKWISE"/>
+                <action android:name="com.encdata.Teamxpros.action.FAKE_CAMERA_ROTATE_ANTI_CLOCKWISE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.encdata.Teamxpros.classes.FakeCamera$FakeCameraActivity" android:resizeableActivity="true" android:supportsPictureInPicture="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <meta-data android:name="com.encdata.Teamxpros.hideFromClonedApps" android:value="true"/>
+        <meta-data android:name="com.encdata.Teamxpros.ignoreUpdates" android:value="true"/>
+    </application>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+</manifest>
