@@ -1,0 +1,118 @@
+.class public abstract Lcom/google/android/gms/internal/ads/zzfom;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads-lite@@22.1.0"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+.end method
+
+.method public static zzc()Lcom/google/android/gms/internal/ads/zzfom;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzfnu;->zza:Lcom/google/android/gms/internal/ads/zzfnu;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+.end method
+
+.method public static zzd(Ljava/lang/Object;)Lcom/google/android/gms/internal/ads/zzfom;
+    .locals 1
+
+    .line 1
+    if-nez p0, :cond_0
+
+    .line 2
+    .line 3
+    sget-object p0, Lcom/google/android/gms/internal/ads/zzfnu;->zza:Lcom/google/android/gms/internal/ads/zzfnu;
+
+    .line 4
+    .line 5
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzfov;
+
+    .line 7
+    .line 8
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/ads/zzfov;-><init>(Ljava/lang/Object;)V
+
+    .line 9
+    .line 10
+    .line 11
+    move-object p0, v0
+
+    .line 12
+    :goto_0
+    return-object p0
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+.end method
+
+
+# virtual methods
+.method public abstract zza(Lcom/google/android/gms/internal/ads/zzfoe;)Lcom/google/android/gms/internal/ads/zzfom;
+.end method
+
+.method public abstract zzb(Ljava/lang/Object;)Ljava/lang/Object;
+.end method

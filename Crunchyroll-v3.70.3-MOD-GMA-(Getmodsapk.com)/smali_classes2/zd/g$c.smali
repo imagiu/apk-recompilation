@@ -1,0 +1,39 @@
+.class public final Lzd/g$c;
+.super Lzd/g;
+.source "UserMigrationType.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lzd/g;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "c"
+.end annotation
+
+
+# static fields
+.field public static final b:Lzd/g$c;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 1
+    new-instance v0, Lzd/g$c;
+
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-direct {v0, v1}, Lzd/g;-><init>(I)V
+
+    .line 7
+    sput-object v0, Lzd/g$c;->b:Lzd/g$c;
+
+    .line 9
+    return-void
+.end method

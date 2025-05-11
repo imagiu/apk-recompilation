@@ -1,0 +1,60 @@
+.class public final synthetic LHg/c;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic b:Lno/l;
+
+.field public final synthetic c:LHg/f;
+
+
+# direct methods
+.method public synthetic constructor <init>(LFg/a$c;LHg/f;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, LHg/c;->b:Lno/l;
+
+    .line 6
+    iput-object p2, p0, LHg/c;->c:LHg/f;
+
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
+
+    .line 1
+    const-string p1, "$onCrunchylistItemClick"
+
+    .line 3
+    iget-object v0, p0, LHg/c;->b:Lno/l;
+
+    .line 5
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/l;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 8
+    const-string p1, "$crunchylistItemUiModel"
+
+    .line 10
+    iget-object v1, p0, LHg/c;->c:LHg/f;
+
+    .line 12
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/l;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 15
+    invoke-interface {v0, v1}, Lno/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 18
+    return-void
+.end method

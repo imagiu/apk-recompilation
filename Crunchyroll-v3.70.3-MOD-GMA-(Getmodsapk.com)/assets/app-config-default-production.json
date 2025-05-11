@@ -1,0 +1,200 @@
+{
+  "help_url": "https://help.crunchyroll.com/",
+  "playhead_interval_ms": 30000,
+  "app_legal_links": {
+    "privacy_policy": "https://www.crunchyroll.com/privacy?mode=mobile",
+    "terms_of_service": "https://www.crunchyroll.com/tos?mode=mobile"
+  },
+  "terms_of_service": {
+    "last_updated_date": ""
+  },
+  "objects_max_ids_per_request_allowed": 100,
+  "content_api_service": {
+    "playheads_upload_batch_size": 500,
+    "playheads_get_batch_size": 350
+  },
+  "user_benefits": {
+    "fetch_interval_sec": 3600
+  },
+  "new_relic": {
+    "is_enabled": true
+  },
+  "datadog": {
+    "is_enabled": true,
+    "sample_rum_sessions": 1,
+    "track_background_rum": false,
+    "first_party_hosts": "crunchyroll.com,crunchyrollsvc.com",
+    "trace_sampling_rate": 1
+  },
+  "in_app_updates": {
+    "is_enabled": false,
+    "client_version_staleness_days": 5,
+    "update_reminder_interval_sec": 2592000,
+    "background_install_delay_sec": 180
+  },
+  "singular": {
+    "is_enabled": true
+  },
+  "user_interactions_tracking": {
+    "is_enabled": true
+  },
+  "in_app_review": {
+    "is_enabled": false,
+    "interval_between_attempts_min": 129600,
+    "app_launches_count_trigger": 5,
+    "app_launches_period_trigger_min": 10080
+  },
+  "app_resume_screens_reload_intervals": {
+    "short_interval_minutes": 3,
+    "medium_interval_minutes": 20,
+    "long_interval_minutes": 480
+  },
+  "billing_notifications": {
+    "is_in_grace_home_cta_enabled": false,
+    "is_in_grace_notification_enabled": false,
+    "is_in_grace_final_notification_enabled": false,
+    "is_on_hold_notification_enabled": false,
+    "is_renew_notification_enabled": false,
+    "experiment_name": "",
+    "experiment_id": "",
+    "variation_name": "",
+    "variation_id": ""
+  },
+  "email_verification_banner": {
+    "occurrence_interval_after_dismiss_minutes": 1440,
+    "occurrence_interval_after_confirmation_minutes": 15
+  },
+  "user_account_migration": {
+    "is_enabled": false,
+    "experiment_name": "",
+    "experiment_id": "",
+    "variation_name": "",
+    "variation_id": ""
+  },
+  "otp": {
+    "is_enabled": false,
+    "available_countries": "IN"
+  },
+  "downloading": {
+    "auto_retry_streams": false
+  },
+  "bulk_sync": {
+    "is_enabled": true
+  },
+  "account_deletion": {
+    "external_url": "https://www.crunchyroll.com/xt8ehz"
+  },
+  "cronet_transport": {
+    "is_enabled": false
+  },
+  "player_gestures": {
+    "pinch_to_zoom": false,
+    "double_tap_to_seek": false
+  },
+  "play_and_license_proxy_migration": {
+    "is_enabled": false
+  },
+  "decoder_fallback": {
+    "is_enabled": true,
+    "exo_fallback": true,
+    "media_codec_async_crypto_flag_enabled": false
+  },
+  "introductory_offer": {
+    "is_enabled": false,
+    "experiment_name": "",
+    "experiment_id": "",
+    "variation_name": "",
+    "variation_id": ""
+  },
+  "preselected_tier": {
+    "is_enabled": false,
+    "tier": "MEGA_FAN"
+  },
+  "available_tiers": {
+    "is_enabled": false,
+    "tiers": "FAN, MEGA_FAN, ANNUAL_MEGA_FAN, ULTIMATE_FAN",
+    "experiment_name": "",
+    "experiment_id": "",
+    "variation_name": "",
+    "variation_id": ""
+  },
+  "whatsapp_support": {
+    "is_enabled": false,
+    "whatsapp_url": "https://api.whatsapp.com/send/?phone=14156874157&text=Ol%C3%A1%21+Eu+preciso+de+ajuda+com+a+minha+conta+Crunchyroll.&type=phone_number&app_absent=0"
+  },
+  "store_navigation": {
+    "is_enabled": false,
+    "store_url": "https://store.crunchyroll.com/?utm_source=android",
+    "sso_url": "https://store.crunchyroll.com/on/demandware.store/Sites-CrunchyrollUS-Site/en_US/Login-OAuthReentry?utm_source=android",
+    "experiment_name": "",
+    "experiment_id": "",
+    "variation_name": "",
+    "variation_id": ""
+  },
+  "whatsapp_otp": {
+    "is_enabled": false
+  },
+  "home_feed_hero_carousel": {
+    "is_enabled": false
+  },
+  "home_feed_load_sizes": {
+    "first_page_phone": 6,
+    "first_page_tablet": 7,
+    "next_page": 10
+  },
+  "home_feed_priority_releases": "",
+  "handle_expired_stream_session": {
+    "is_enabled": false
+  },
+  "foxhound": {
+    "page_size": 10
+  },
+  "account_delete_update": {
+    "is_enabled": false
+  },
+  "video_improvements": {
+    "reuse_objects_response": false
+  },
+  "show_screen_improvements": {
+    "reuse_objects_response": false
+  },
+  "l3_drm_devices": {
+    "device_models": "ASUS_A006, ASUS_A009, ASUS_X00HD, ASUS_X00ID, ASUS_X00LD, ASUS_X00LDA, ASUS_X00LDB, ASUS_Z012D, ASUS_Z012DA, ASUS_Z016D, ASUS_Z017DA, ASUS_Z017DC, ASUS_Z01HD, ASUS_Z01KD, ASUS_Z01KDA, HiPadX, KingPad_M10, Pixel C, TECNO LH8n, Tab 11, ZE553KL, moto e32, Pixel 6, Pixel 6 Pro, Pixel 6a, 2201116SG, 2201117TG, 2201116PG, 2201117TL, STK-LX3, SM-A235M, 23021RAAEG, 22111317PG, 23028RA60L, moto g52, 2201117TY, motorola edge 30 neo, AGS2-W09, BAH2-W19, SM-A236M, moto g32, moto g42, RMO-NX3, moto g71 5G, moto g82 5G, 23129RA5FL, M2010J19SL, M2010J19CG, 23021RAA2Y, moto g84 5G, TFY-LX3, CPH2363, JLN-LX3, MRD-LX3, M2010J19SG, 22111317G, V2035, NTN-LX3, MAR-LX3A, MAR-LX1A, MAR-LX1B, MAR-LX3Bm, MAR-LX1M, MAR-LX2, MAR-LX3Am"
+  },
+  "onboarding_experiments": {
+    "skip_payment_enabled": false,
+    "carousel_enabled": false
+  },
+  "games_carousel_version": {
+    "version": "legacy",
+    "experiment_name": "",
+    "experiment_id": "",
+    "variation_name": "",
+    "variation_id": ""
+  },
+  "use_content_availability_status": {
+    "is_enabled": false
+  },
+  "end_slate": {
+    "is_enabled": false,
+    "remote_configurable": false
+  },
+  "enable_svod_preroll": {
+    "is_enabled": false
+  },
+  "cr_arc": {
+    "is_enabled": false,
+    "remote_configurable": false
+  },
+  "silent_login": {
+    "is_enabled": false,
+    "is_store_enabled": false,
+    "experiment_name": "",
+    "experiment_id": "",
+    "variation_name": "",
+    "variation_id": ""
+  },
+  "check_browser_availability": {
+    "is_enabled": false
+  }
+}

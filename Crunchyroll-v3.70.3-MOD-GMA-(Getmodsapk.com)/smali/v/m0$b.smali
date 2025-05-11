@@ -1,0 +1,76 @@
+.class public final Lv/m0$b;
+.super Lkotlin/jvm/internal/m;
+.source "Scroll.kt"
+
+# interfaces
+.implements Lno/l;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lv/m0;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/m;",
+        "Lno/l<",
+        "Ljava/lang/Integer;",
+        "Lv/m0;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final h:Lv/m0$b;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 1
+    new-instance v0, Lv/m0$b;
+
+    .line 3
+    const/4 v1, 0x1
+
+    .line 4
+    invoke-direct {v0, v1}, Lkotlin/jvm/internal/m;-><init>(I)V
+
+    .line 7
+    sput-object v0, Lv/m0$b;->h:Lv/m0$b;
+
+    .line 9
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    check-cast p1, Ljava/lang/Number;
+
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    .line 6
+    move-result p1
+
+    .line 7
+    new-instance v0, Lv/m0;
+
+    .line 9
+    invoke-direct {v0, p1}, Lv/m0;-><init>(I)V
+
+    .line 12
+    return-object v0
+.end method

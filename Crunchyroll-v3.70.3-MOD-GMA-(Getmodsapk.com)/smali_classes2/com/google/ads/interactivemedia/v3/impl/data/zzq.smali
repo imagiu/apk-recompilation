@@ -1,0 +1,271 @@
+.class final Lcom/google/ads/interactivemedia/v3/impl/data/zzq;
+.super Lcom/google/ads/interactivemedia/v3/impl/data/zzbb;
+.source "com.google.ads.interactivemedia.v3:interactivemedia@@3.35.1"
+
+
+# instance fields
+.field private final height:I
+
+.field private final left:I
+
+.field private final top:I
+
+.field private final width:I
+
+
+# direct methods
+.method private constructor <init>(IIII)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lcom/google/ads/interactivemedia/v3/impl/data/zzbb;-><init>()V
+
+    iput p1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->left:I
+
+    iput p2, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->top:I
+
+    iput p3, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->height:I
+
+    iput p4, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->width:I
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(IIIILcom/google/ads/interactivemedia/v3/impl/data/zzp;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;-><init>(IIII)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    if-ne p1, p0, :cond_0
+
+    .line 4
+    return v0
+
+    .line 5
+    :cond_0
+    instance-of v1, p1, Lcom/google/ads/interactivemedia/v3/impl/data/zzbb;
+
+    .line 7
+    const/4 v2, 0x0
+
+    .line 8
+    if-eqz v1, :cond_1
+
+    .line 10
+    check-cast p1, Lcom/google/ads/interactivemedia/v3/impl/data/zzbb;
+
+    .line 12
+    iget v1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->left:I
+
+    .line 14
+    invoke-virtual {p1}, Lcom/google/ads/interactivemedia/v3/impl/data/zzbb;->left()I
+
+    .line 17
+    move-result v3
+
+    .line 18
+    if-ne v1, v3, :cond_1
+
+    .line 20
+    iget v1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->top:I
+
+    .line 22
+    invoke-virtual {p1}, Lcom/google/ads/interactivemedia/v3/impl/data/zzbb;->top()I
+
+    .line 25
+    move-result v3
+
+    .line 26
+    if-ne v1, v3, :cond_1
+
+    .line 28
+    iget v1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->height:I
+
+    .line 30
+    invoke-virtual {p1}, Lcom/google/ads/interactivemedia/v3/impl/data/zzbb;->height()I
+
+    .line 33
+    move-result v3
+
+    .line 34
+    if-ne v1, v3, :cond_1
+
+    .line 36
+    iget v1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->width:I
+
+    .line 38
+    invoke-virtual {p1}, Lcom/google/ads/interactivemedia/v3/impl/data/zzbb;->width()I
+
+    .line 41
+    move-result p1
+
+    .line 42
+    if-ne v1, p1, :cond_1
+
+    .line 44
+    return v0
+
+    .line 45
+    :cond_1
+    return v2
+.end method
+
+.method public hashCode()I
+    .locals 3
+
+    .line 1
+    iget v0, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->left:I
+
+    .line 3
+    const v1, 0xf4243
+
+    .line 6
+    xor-int/2addr v0, v1
+
+    .line 7
+    mul-int/2addr v0, v1
+
+    .line 8
+    iget v2, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->top:I
+
+    .line 10
+    xor-int/2addr v0, v2
+
+    .line 11
+    mul-int/2addr v0, v1
+
+    .line 12
+    iget v2, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->height:I
+
+    .line 14
+    xor-int/2addr v0, v2
+
+    .line 15
+    mul-int/2addr v0, v1
+
+    .line 16
+    iget v1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->width:I
+
+    .line 18
+    xor-int/2addr v0, v1
+
+    .line 19
+    return v0
+.end method
+
+.method public height()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->height:I
+
+    .line 3
+    return v0
+.end method
+
+.method public left()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->left:I
+
+    .line 3
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 3
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 3
+    const-string v1, "BoundingRectData{left="
+
+    .line 5
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 8
+    iget v1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->left:I
+
+    .line 10
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 13
+    const-string v1, ", top="
+
+    .line 15
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 18
+    iget v1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->top:I
+
+    .line 20
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 23
+    const-string v1, ", height="
+
+    .line 25
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 28
+    iget v1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->height:I
+
+    .line 30
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 33
+    const-string v1, ", width="
+
+    .line 35
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 38
+    iget v1, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->width:I
+
+    .line 40
+    const-string v2, "}"
+
+    .line 42
+    invoke-static {v0, v1, v2}, LC2/y;->e(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    .line 45
+    move-result-object v0
+
+    .line 46
+    return-object v0
+.end method
+
+.method public top()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->top:I
+
+    .line 3
+    return v0
+.end method
+
+.method public width()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/ads/interactivemedia/v3/impl/data/zzq;->width:I
+
+    .line 3
+    return v0
+.end method

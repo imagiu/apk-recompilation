@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="add_to_crunchylist_button_margin_start">70.0dip</dimen>
+    <dimen name="artist_summary_horizontal_margin">70.0dip</dimen>
+    <dimen name="billing_notification_hime_size">250.0dip</dimen>
+    <dimen name="hime_size">250.0dip</dimen>
+    <item type="dimen" name="in_grace_hime_vertical_bias">0.3</item>
+    <dimen name="music_assets_list_item_padding_bottom">12.0dip</dimen>
+    <item type="dimen" name="on_hold_hime_vertical_bias">0.3</item>
+    <dimen name="settings_maturity_restrictions_header_padding_horizontal">34.0dip</dimen>
+    <dimen name="settings_premium_membership_billing_notification_margin_horizontal">24.0dip</dimen>
+    <dimen name="settings_premium_membership_hime_image_height">252.0dip</dimen>
+    <dimen name="settings_premium_membership_item_padding_horizontal">20.0dip</dimen>
+    <dimen name="settings_premium_membership_restriction_hime_height">285.0dip</dimen>
+    <dimen name="settings_premium_membership_upgrade_margin_horizontal">20.0dip</dimen>
+    <dimen name="settings_premium_membership_upgrade_margin_vertical">20.0dip</dimen>
+    <dimen name="show_page_summary_horizontal_margin">76.0dip</dimen>
+    <dimen name="show_page_tab_error_container_height">374.0dip</dimen>
+    <dimen name="similar_message_padding">250.0dip</dimen>
+    <dimen name="video_controls_center_rewind_forward_horizontal_margin">100.0dip</dimen>
+    <item type="dimen" name="hime_vertical_bias">0.5</item>
+</resources>

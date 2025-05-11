@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.crunchyroll.music.watch.screen.layout.WatchMusicLayout android:id="@id/watch_music_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/error_overlay_container" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <include android:id="@id/progress_overlay" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/overlay_progress_music_layout" />
+        <FrameLayout android:id="@id/transparent_progress_overlay" android:background="@color/transparent_progress_overlay" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <ProgressBar android:layout_gravity="center" android:layout_width="@dimen/default_progress_bar_size" android:layout_height="@dimen/default_progress_bar_size" style="@style/ProgressBar" />
+        </FrameLayout>
+    </com.crunchyroll.music.watch.screen.layout.WatchMusicLayout>
+    <FrameLayout android:id="@id/no_network_error_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ellation.widgets.bottommessage.error.ErrorBottomMessageView android:layout_gravity="bottom" android:id="@id/no_network_message_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

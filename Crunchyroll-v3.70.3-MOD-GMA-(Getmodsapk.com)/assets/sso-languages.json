@@ -1,0 +1,68 @@
+[
+  {
+    "name": "English (US)",
+    "pathname": "en",
+    "code": "en-US",
+    "tx_code": "en_US"
+  },
+  {
+    "name": "Español",
+    "pathname": "es",
+    "code": "es-419",
+    "tx_code": "es_419"
+  },
+  {
+    "name": "Español (España)",
+    "pathname": "es-es",
+    "code": "es-ES",
+    "tx_code": "es_ES"
+  },
+  {
+    "name": "Português (Brasil)",
+    "pathname": "pt-br",
+    "code": "pt-BR",
+    "tx_code": "pt_BR"
+  },
+  {
+    "name": "Português (Portugal)",
+    "pathname": "pt-pt",
+    "code": "pt-PT",
+    "tx_code": "pt_PT"
+  },
+  {
+    "name": "Français (France)",
+    "pathname": "fr",
+    "code": "fr-FR",
+    "tx_code": "fr_FR"
+  },
+  {
+    "name": "Deutsch",
+    "pathname": "de",
+    "code": "de-DE",
+    "tx_code": "de_DE"
+  },
+  {
+    "name": "العربية",
+    "pathname": "ar",
+    "code": "ar-SA",
+    "tx_code": "ar_SA"
+  },
+  {
+    "name": "Italiano",
+    "pathname": "it",
+    "code": "it-IT",
+    "tx_code": "it_IT"
+  },
+  {
+    "name": "Русский",
+    "pathname": "ru",
+    "code": "ru-RU",
+    "tx_code": "ru_RU"
+  },
+  {
+    "name": "हिंदी",
+    "pathname": "hi",
+    "code": "hi-IN",
+    "tx_code": "hi_IN"
+  }
+]

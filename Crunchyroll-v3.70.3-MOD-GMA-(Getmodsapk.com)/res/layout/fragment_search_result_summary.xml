@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/search_list" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ellation.feature.empty.EmptyLayout android:layout_gravity="center" android:id="@id/search_results_summary_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" app:image="@drawable/empty_search_image" app:subtitle="@string/search_empty_subtitle" app:title="@string/search_empty_title" />
+    <include android:layout_gravity="center" android:id="@id/error_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/error_retry_layout" />
+    <include android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/progress_layout" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/snackbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/color_white" android:gravity="center" android:layout_gravity="start" android:id="@id/downloads_toggle_select_all_button" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/select_all" android:textAllCaps="true" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" style="@style/Button3" />
+    <TextView android:textColor="@color/color_white" android:gravity="center" android:layout_gravity="end" android:id="@id/downloads_manage_button" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/manage_downloads" android:textAllCaps="true" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" style="@style/Button3" />
+</FrameLayout>

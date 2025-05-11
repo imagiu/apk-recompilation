@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/popup_arrow_width" android:width="@dimen/popup_arrow_height" android:viewportWidth="100.0" android:viewportHeight="100.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/cr_black_pearl" android:pathData="M 100,0 L 0,50 100,100 z" />
+</vector>

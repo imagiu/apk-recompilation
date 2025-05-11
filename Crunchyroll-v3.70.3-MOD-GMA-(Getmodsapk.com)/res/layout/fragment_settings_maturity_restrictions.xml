@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/maturity_restrictions_scroll_view" android:background="@color/black" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/maturity_restrictions_faq_container" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/maturity_restrictions_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/maturity_restrictions_sub_header" android:paddingTop="@dimen/settings_maturity_restrictions_header_padding_top" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/maturity_restrictions_screen_sub_header" android:paddingHorizontal="@dimen/settings_maturity_restrictions_header_padding_horizontal" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/BodyLatoSemibold" />
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:textColor="@color/silver" android:gravity="center" android:id="@id/maturity_restrictions_faq_container" android:padding="@dimen/settings_maturity_restrictions_faq_container_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/maturity_restrictions_faq_title" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/BodyLatoSemibold" />
+</androidx.constraintlayout.widget.ConstraintLayout>

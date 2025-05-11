@@ -1,0 +1,43 @@
+.class public final LRd/c;
+.super Lsm/b;
+.source "WatchScreenMenuProvider.kt"
+
+
+# static fields
+.field public static final e:LRd/c;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
+
+    .line 1
+    new-instance v6, LRd/c;
+
+    .line 3
+    const/4 v2, 0x0
+
+    .line 4
+    const/16 v5, 0xe
+
+    .line 6
+    const v1, 0x7f1406bb
+
+    .line 9
+    const/4 v3, 0x0
+
+    .line 10
+    const/4 v4, 0x0
+
+    .line 11
+    move-object v0, v6
+
+    .line 12
+    invoke-direct/range {v0 .. v5}, Lsm/b;-><init>(ILjava/lang/Integer;ZLjava/lang/Integer;I)V
+
+    .line 15
+    sput-object v6, LRd/c;->e:LRd/c;
+
+    .line 17
+    return-void
+.end method

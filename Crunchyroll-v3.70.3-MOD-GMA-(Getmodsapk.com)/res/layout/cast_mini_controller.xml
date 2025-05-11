@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/container_all" android:paddingTop="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ProgressBar android:id="@id/progressBar" android:background="@color/cr_dark_blue" android:layout_width="fill_parent" android:layout_height="2.0dip" android:progressDrawable="@drawable/cast_mini_controller_progress_drawable" android:mirrorForRtl="false" style="@android:style/Widget.ProgressBar.Horizontal" />
+        <ProgressBar android:id="@id/liveProgressBar" android:background="@null" android:layout_width="fill_parent" android:layout_height="2.0dip" android:progress="100" android:progressDrawable="@drawable/watch_progress_background" android:mirrorForRtl="false" style="?android:progressBarStyleHorizontal" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/container_current" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/center" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="1.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <ImageView android:id="@id/icon_view" android:layout_width="0.0dip" android:layout_height="0.0dip" android:src="@drawable/cast_album_art_placeholder" android:scaleType="centerCrop" android:minHeight="@dimen/cast_mini_controller_icon_height" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="1:1" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <com.ellation.crunchyroll.cast.mini.CastMiniContentStateLayout android:id="@id/cast_mini_content_state_container" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_centerVertical="true" app:layout_constraintBottom_toBottomOf="@id/icon_view" app:layout_constraintEnd_toEndOf="@id/icon_view" app:layout_constraintStart_toStartOf="@id/icon_view" app:layout_constraintTop_toTopOf="@id/icon_view" />
+            <ImageView android:id="@id/button_0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/cast_mini_controller_control_button_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/button_1" app:layout_constraintTop_toTopOf="parent" />
+            <ImageView android:id="@id/button_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/cast_mini_controller_control_button_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/controls_container" app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout android:id="@id/controls_container" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <FrameLayout android:id="@id/playback_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/button_2" android:background="?selectableItemBackgroundBorderless" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="@dimen/cast_mini_controller_icon_width" android:layout_height="@dimen/cast_mini_controller_icon_height" android:scaleType="fitCenter" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+                </FrameLayout>
+                <androidx.compose.ui.platform.ComposeView android:id="@id/live_badge_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/button_0" app:layout_constraintStart_toEndOf="@id/icon_view" app:layout_constraintTop_toTopOf="parent">
+                <TextView android:textAppearance="?castTitleTextAppearance" android:textColor="@color/cr_silver" android:ellipsize="end" android:id="@id/title_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:maxLines="1" android:includeFontPadding="false" style="@style/Subheader2LatoSemibold" />
+                <TextView android:textAppearance="?castSubtitleTextAppearance" android:textColor="@color/color_white" android:ellipsize="end" android:id="@id/subtitle_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@style/BodyLatoMedium" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</LinearLayout>

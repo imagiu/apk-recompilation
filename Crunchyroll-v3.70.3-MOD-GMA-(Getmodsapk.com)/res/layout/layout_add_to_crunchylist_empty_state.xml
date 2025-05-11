@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/crunchylists_window_background" android:paddingLeft="@dimen/add_to_crunchylist_empty_layout_padding_horizontal" android:paddingTop="@dimen/add_to_crunchylist_empty_layout_padding_top" android:paddingRight="@dimen/add_to_crunchylist_empty_layout_padding_horizontal" android:paddingBottom="@dimen/add_to_crunchylist_empty_layout_padding_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="160.0dip" android:layout_height="160.0dip" android:src="@drawable/crunchylists_empty_state_img" />
+    <TextView android:textColor="@color/silver" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/crunchylists_add_to_crunchylist_empty_state_message" style="@style/BodyLatoMedium" />
+    <TextView android:textColor="@color/black" android:id="@id/empty_crunchylists_create_list_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="32.0dip" android:text="@string/crunchylists_add_to_crunchylist_create_new_list" style="@style/CtaButton" />
+</LinearLayout>

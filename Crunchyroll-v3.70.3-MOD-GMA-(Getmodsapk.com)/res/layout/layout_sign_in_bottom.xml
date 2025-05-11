@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ellation.widgets.unbreakabletextviewgroup.UnbreakableTextViewGroup android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividerTag="divider" app:verticalSpaceBetweenItems="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/primary" android:id="@id/forgot_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sign_in_forgot_password" style="@style/SignInAlternativeLinkText" />
+    <TextView android:textColor="@color/color_white" android:tag="divider" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vertical_bar" style="@style/SignInAlternativeLinkText" />
+    <TextView android:textColor="@color/primary" android:id="@id/sign_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/create_account" style="@style/SignInAlternativeLinkText" />
+</com.ellation.widgets.unbreakabletextviewgroup.UnbreakableTextViewGroup>

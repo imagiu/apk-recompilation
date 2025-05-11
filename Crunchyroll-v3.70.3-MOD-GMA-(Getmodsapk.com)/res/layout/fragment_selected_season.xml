@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/season_picker_text_margin_start" android:paddingEnd="@dimen/season_picker_text_margin_end"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/selected_text_view" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="48.0dip" android:singleLine="true" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:paddingStart="4.0dip" android:paddingEnd="0.0dip" app:drawableStartCompat="@drawable/ic_caret_down_white" style="@style/Subheader2LatoSemibold" />
+    <com.ellation.widgets.overflow.OverflowButton android:layout_gravity="end|center" android:id="@id/overflow_button" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_overflow_button" android:contentDescription="@string/desc_overflow_menu" android:paddingHorizontal="2.0dip" />
+</LinearLayout>
