@@ -79,7 +79,7 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 1
+    .locals 6
 
     .line 22
     move-object p1, p0
@@ -94,6 +94,8 @@
 
     .line 23
     invoke-super {p0, p1}, Lcom/facebook/react/ReactActivity;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-static {p0}, Lcom/unity3d/player/PlatformSupportAdaptingActivity;->Start(Landroid/content/Context;)V
 
     return-void
 .end method

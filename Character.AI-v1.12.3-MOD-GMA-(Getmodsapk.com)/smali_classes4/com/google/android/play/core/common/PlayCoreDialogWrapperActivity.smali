@@ -97,7 +97,7 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "window_flags"
+    const-string/jumbo v2, "window_flags"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
