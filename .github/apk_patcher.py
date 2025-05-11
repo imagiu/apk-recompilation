@@ -46,9 +46,15 @@ def patch_file(file_path, declared):
         for ref_type, pattern in REFERENCE_PATTERNS.items():
             matches = pattern.findall(content)
             for match in matches:
-                if match not in declared.get(ref_type, set()):
+                if ref_type == 'color':
+                    # Always force android:color → color (local)
+                    content = re.sub(f'@android:color/{match}', f'@color/{match}', content)
+                    # If still not declared, replace with default
+                    if match not in declared.get(ref_type, set()):
+                        content = re.sub(f'@color/{match}', SAFE_DEFAULTS['color'], content)
+
+                elif match not in declared.get(ref_type, set()):
                     if ref_type == 'string':
-                        # literal substitution for strings
                         content = re.sub(f'@string/{match}', SAFE_DEFAULTS['string'], content)
                     else:
                         replacement = SAFE_DEFAULTS[ref_type]
@@ -57,14 +63,14 @@ def patch_file(file_path, declared):
         if content != original:
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(content)
-            print(f"🔧 Patched: {file_path}")
+            print(f"Patched: {file_path}")
 
     except Exception as e:
         print(f"[ERROR] Failed to patch {file_path}: {e}")
 
 # --- Main patching function ---
 def patch_resources(res_root):
-    print(f"📦 Scanning and patching resources in: {res_root}")
+    print(f"Scanning and patching resources in: {res_root}")
     declared = get_declared_resources(res_root)
     for xml_file in Path(res_root).rglob("*.xml"):
         patch_file(xml_file, declared)
@@ -72,13 +78,13 @@ def patch_resources(res_root):
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 2:
-        print("Usage: python3 patch_resources.py /path/to/decompiled_apk")
+        print("Usage: python3 apk_patcher.py /path/to/decompiled_apk")
         sys.exit(1)
 
     apk_path = sys.argv[1]
     res_path = Path(apk_path) / "res"
     if not res_path.exists():
-        print("❌ res/ folder not found!")
+        print("res/ folder not found!")
         sys.exit(1)
 
     patch_resources(res_path)
