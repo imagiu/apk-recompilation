@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static zba:Z = false
+.field private static zba:Z
 
 
 # instance fields
