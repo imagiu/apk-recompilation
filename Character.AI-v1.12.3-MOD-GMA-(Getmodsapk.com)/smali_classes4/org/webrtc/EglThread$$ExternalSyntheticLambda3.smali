@@ -1,0 +1,36 @@
+.class public final synthetic Lorg/webrtc/EglThread$$ExternalSyntheticLambda3;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic f$0:Lorg/webrtc/EglThread;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lorg/webrtc/EglThread;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/webrtc/EglThread$$ExternalSyntheticLambda3;->f$0:Lorg/webrtc/EglThread;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lorg/webrtc/EglThread$$ExternalSyntheticLambda3;->f$0:Lorg/webrtc/EglThread;
+
+    invoke-static {v0}, Lorg/webrtc/EglThread;->$r8$lambda$scL_-pxdb31ZCWT3gPzHD3Bbhes(Lorg/webrtc/EglThread;)V
+
+    return-void
+.end method

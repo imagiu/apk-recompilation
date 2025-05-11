@@ -1,0 +1,53 @@
+.class Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl$4$3$1;
+.super Ljava/lang/Object;
+.source "RNBootSplashModuleImpl.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl$4$3;->run()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$1:Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl$4$3;
+
+
+# direct methods
+.method constructor <init>(Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl$4$3;)V
+    .locals 0
+
+    .line 208
+    iput-object p1, p0, Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl$4$3$1;->this$1:Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl$4$3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 2
+
+    .line 213
+    invoke-static {}, Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl;->-$$Nest$sfgetmFadeOutDialog()Lcom/zoontek/rnbootsplash/RNBootSplashDialog;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl$4$3$1$1;
+
+    invoke-direct {v1, p0}, Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl$4$3$1$1;-><init>(Lcom/zoontek/rnbootsplash/RNBootSplashModuleImpl$4$3$1;)V
+
+    invoke-virtual {v0, v1}, Lcom/zoontek/rnbootsplash/RNBootSplashDialog;->dismiss(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
