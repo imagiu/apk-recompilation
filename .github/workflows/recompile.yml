@@ -63,7 +63,7 @@ jobs:
       - name: 🔧 Patch resources for compatibility
         if: steps.check_apktool.outputs.exists == 'true'
         run: |
-          python3 apk_patcher.py "${{ steps.detect.outputs.folder_name }}"
+          python3 .github/apk_patcher.py "${{ steps.detect.outputs.folder_name }}"
 
       - name: Debug folder contents
         run: |
