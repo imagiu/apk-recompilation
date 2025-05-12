@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/secondary_text"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <shape>
+                    <stroke android:width="4.0dip" android:color="@color/moveDark" />
+                    <solid android:color="@color/colorPrimaryDark" />
+                    <corners android:topLeftRadius="@dimen/main_radius" android:topRightRadius="@dimen/main_radius" android:bottomLeftRadius="@dimen/main_radius" android:bottomRightRadius="@dimen/main_radius" />
+                </shape>
+            </item>
+            <item android:state_activated="true">
+                <shape>
+                    <stroke android:width="4.0dip" android:color="@color/moveDark" />
+                    <solid android:color="@color/colorPrimaryDark" />
+                    <corners android:topLeftRadius="@dimen/main_radius" android:topRightRadius="@dimen/main_radius" android:bottomLeftRadius="@dimen/main_radius" android:bottomRightRadius="@dimen/main_radius" />
+                </shape>
+            </item>
+            <item>
+                <shape>
+                    <stroke android:width="0.0dip" android:color="@color/moveLight" />
+                    <solid android:color="@color/colorPrimaryDark" />
+                    <corners android:topLeftRadius="@dimen/main_radius" android:topRightRadius="@dimen/main_radius" android:bottomLeftRadius="@dimen/main_radius" android:bottomRightRadius="@dimen/main_radius" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="drop">
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeBottomRight">39.999996%</item>
+        <item name="cornerSizeTopLeft">39.999996%</item>
+    </style>
+    <style name="tag">
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeBottomLeft">50.0%</item>
+        <item name="cornerSizeTopRight">50.0%</item>
+    </style>
+</resources>

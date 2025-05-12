@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="classic_back">#ff3b3b3b</color>
+    <color name="classic_icon">#fffcfcfc</color>
+    <color name="classic_subtitle">#ffd4d4d4</color>
+    <color name="classic_title">#fffcfcfc</color>
+    <color name="colorpickerview__backgroundLight">#ff080808</color>
+    <color name="colorpickerview__secondary_text">#ffb3b3b3</color>
+    <color name="colorpickerview__white">#ff202020</color>
+</resources>

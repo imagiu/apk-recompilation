@@ -1,0 +1,63 @@
+.class public abstract Li1/n$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Lcom/google/auto/value/AutoValue$Builder;
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Li1/n;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "a"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract a()Li1/n;
+.end method
+
+.method public abstract b(Lf1/b;)Li1/n$a;
+.end method
+
+.method public abstract c(Lf1/c;)Li1/n$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lf1/c<",
+            "*>;)",
+            "Li1/n$a;"
+        }
+    .end annotation
+.end method
+
+.method public abstract d(Lf1/e;)Li1/n$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lf1/e<",
+            "*[B>;)",
+            "Li1/n$a;"
+        }
+    .end annotation
+.end method
+
+.method public abstract e(Li1/o;)Li1/n$a;
+.end method
+
+.method public abstract f(Ljava/lang/String;)Li1/n$a;
+.end method

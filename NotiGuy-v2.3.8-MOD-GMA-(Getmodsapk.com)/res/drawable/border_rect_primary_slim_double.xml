@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="#ff252525" />
+    </item>
+    <item android:left="1.0dip" android:top="1.0dip" android:right="1.0dip" android:bottom="1.0dip">
+        <color android:color="#ffffffff" />
+    </item>
+    <item android:left="2.0dip" android:top="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+        <color android:color="#ff252525" />
+    </item>
+    <item android:left="3.0dip" android:top="3.0dip" android:right="3.0dip" android:bottom="3.0dip">
+        <color android:color="#ffffffff" />
+    </item>
+</layer-list>

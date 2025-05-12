@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|top" android:orientation="vertical" android:id="@id/intro_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:padding="@dimen/settings_margin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="?actionBarSize">
+        <TextView android:textColor="@android:color/white" android:id="@id/section_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.AppCompat.Headline" />
+        <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/section_sublabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_margin" android:text="." android:alpha="0.7" style="@style/TextAppearance.AppCompat.Body1" />
+    </LinearLayout>
+</FrameLayout>

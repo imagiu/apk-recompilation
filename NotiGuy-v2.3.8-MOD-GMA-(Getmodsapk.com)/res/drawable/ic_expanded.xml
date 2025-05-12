@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="10.0dip" android:width="20.0dip" android:viewportWidth="200.0" android:viewportHeight="100.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="Rounded Rectangle 1" android:fillColor="#ff2e2e54" android:pathData="m18 8h164c6.63 0 12 5.37 12 12v61c0 6.63 -5.37 12 -12 12h-164c-6.63 0 -12 -5.37 -12 -12v-61c0 -6.63 5.37 -12 12 -12z" />
+    <path android:name="Ellipse 1" android:fillColor="#ffa18cd1" android:pathData="m100 9c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9c0 -4.97 4.03 -9 9 -9z" />
+</vector>

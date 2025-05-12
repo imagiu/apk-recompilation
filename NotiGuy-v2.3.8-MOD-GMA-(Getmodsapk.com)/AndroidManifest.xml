@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:http="http://schemas.android.com/apk/res-auto" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="com.dynamic.notifications" platformBuildVersionCode="34" platformBuildVersionName="14">
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <queries>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+        <intent>
+            <action android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_round" android:label="@string/app_name" android:localeConfig="@xml/locales_config" android:name="com.dynamic.notifications.app.App" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true">
+        <meta-data android:name="com.google.mlkit.vision.DEPENDENCIES" android:value="barcode_ui"/>
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.SaNotch" android:screenOrientation="portrait" android:theme="@style/CustomTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.Intro" android:screenOrientation="portrait" android:theme="@style/CustomTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.SaCat" android:theme="@style/CustomTheme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.RateTrans" android:theme="@style/TransTheme" android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.dynamic.notifications.ui.SaCat"/>
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.SaIndicate" android:theme="@style/CustomTheme" android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.dynamic.notifications.ui.SaCat"/>
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.SaProgress" android:theme="@style/CustomTheme" android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.dynamic.notifications.ui.SaCat"/>
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.SaTouch" android:theme="@style/CustomTheme" android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.dynamic.notifications.ui.SaCat"/>
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.SaTouchSelect" android:theme="@style/CustomTheme" android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.dynamic.notifications.ui.SaTouch"/>
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.SaDynamic" android:theme="@style/CustomTheme" android:windowSoftInputMode="adjustPan">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.dynamic.notifications.ui.SaCat"/>
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.Gdpr" android:theme="@style/NormTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.Pur" android:theme="@style/CustomTheme" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.dynamic.notifications.ui.Ac" android:theme="@style/CustomTheme" android:windowSoftInputMode="stateUnchanged">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.dynamic.notifications.ui.SaDynamic"/>
+        </activity>
+        <meta-data android:name="android.max_aspect" android:value="3.5"/>
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <service android:exported="true" android:name="com.dynamic.notifications.notifications.listener" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:label="@string/app_subtitle" android:name="com.dynamic.notifications.lock.tas" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter android:priority="998">
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibility_ticker"/>
+        </service>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="7.1.1"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivityV2" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.google.mlkit.vision.codescanner.internal.GmsBarcodeScanningDelegateActivity" android:screenOrientation="portrait"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:authorities="com.dynamic.notifications.mlkitinitprovider" android:exported="false" android:initOrder="99" android:name="com.google.mlkit.common.internal.MlKitInitProvider"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="com.dynamic.notifications.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
+        <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+        <activity android:excludeFromRecents="true" android:hardwareAccelerated="true" android:launchMode="singleTask" android:name="com.android.spreadsheet.LoadSpreadSheetActivity" android:theme="@android:style/Theme.Material.Dialog.NoActionBar.MinWidth"/>
+    </application>
+</manifest>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_eye_menu" android:textSize="@dimen/main_list" android:textColor="@color/primary_text" android:id="@id/preview" android:title="@string/preview" android:iconTint="@color/primary_text" android:iconTintMode="src_atop" app:actionLayout="@layout/menu_sign" app:showAsAction="always" />
+    <item android:icon="@drawable/premium" android:textSize="@dimen/main_list" android:id="@id/premium" android:title="premium" app:showAsAction="always" />
+</menu>

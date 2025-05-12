@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/premium" android:textSize="@dimen/main_list" android:id="@id/premium" android:title="premium" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_star_half_black_24dp" android:textSize="@dimen/main_list" android:id="@id/rate" android:title="@string/rate" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_star_half_black_24dp" android:textSize="@dimen/main_list" android:id="@id/share" android:title="@string/share" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_verified" android:textSize="@dimen/main_list" android:id="@id/policy" android:title="@string/policy" app:showAsAction="never" />
+</menu>
