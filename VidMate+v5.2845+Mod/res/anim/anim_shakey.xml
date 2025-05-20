@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<translate android8515:interpolator="@anim/a_cycle" android8515:duration="1000" android8515:startOffset="100" android8515:fromYDelta="0.0" android8515:toYDelta="20.0"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android8515="http://schemas.android.com/apk/res/android" />

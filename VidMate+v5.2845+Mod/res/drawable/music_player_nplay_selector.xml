@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android6390="http://schemas.android.com/apk/res/android">
-    <item android6390:state_pressed="true" android6390:drawable="@drawable/music_player_notification_play_press" />
-    <item android6390:drawable="@drawable/music_player_notification_play" />
-</selector>

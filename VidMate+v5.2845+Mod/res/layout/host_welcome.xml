@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android3468:gravity="center" android3468:orientation="vertical" android3468:layout_width="fill_parent" android3468:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android3468="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ProgressBar android3468:id="@id/progressBar" android3468:visibility="gone" android3468:layout_width="fill_parent" android3468:layout_height="wrap_content" android3468:layout_marginTop="64.0dip" android3468:indeterminate="false" android3468:scaleY="2.0" android3468:layout_marginStart="@dimen/dp_16" android3468:layout_marginEnd="@dimen/dp_16" style="@android:style/Widget.Holo.ProgressBar.Horizontal" />
-    <TextView android3468:textColor="@color/black" android3468:id="@id/textView" android3468:layout_width="wrap_content" android3468:layout_height="wrap_content" />
-</LinearLayout>

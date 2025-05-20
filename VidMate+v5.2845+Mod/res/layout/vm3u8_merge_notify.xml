@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android7539:padding="5.0dip" android7539:layout_width="fill_parent" android7539:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android7539="http://schemas.android.com/apk/res/android">
-    <ImageView android7539:id="@id/content_view_image" android7539:layout_width="40.0dip" android7539:layout_height="40.0dip" android7539:layout_marginRight="5.0dip" android7539:src="@drawable/ic_launcher" android7539:layout_marginEnd="5.0dip" />
-    <TextView android7539:textSize="13.0sp" android7539:ellipsize="end" android7539:id="@id/merge_name_tv" android7539:layout_width="wrap_content" android7539:layout_height="wrap_content" android7539:singleLine="true" android7539:layout_toRightOf="@id/content_view_image" android7539:layout_alignParentTop="true" android7539:layout_toEndOf="@id/content_view_image" style="@style/NotificationTitle" />
-    <TextView android7539:textSize="12.0sp" android7539:id="@id/merge_state_tv" android7539:layout_width="wrap_content" android7539:layout_height="wrap_content" android7539:layout_marginTop="3.0dip" android7539:layout_marginRight="8.0dip" android7539:singleLine="true" android7539:layout_toRightOf="@id/content_view_image" android7539:layout_below="@id/merge_name_tv" android7539:layout_marginEnd="8.0dip" android7539:layout_toEndOf="@id/content_view_image" style="@style/NotificationText" />
-    <ProgressBar android7539:id="@id/notifyProgress" android7539:layout_width="fill_parent" android7539:layout_height="3.0dip" android7539:layout_marginTop="5.0dip" android7539:max="100" android7539:progress="0" android7539:progressDrawable="@drawable/progressbar_web" android7539:layout_below="@id/content_view_image" style="@android:style/Widget.ProgressBar.Horizontal" />
-</RelativeLayout>

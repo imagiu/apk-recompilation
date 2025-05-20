@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android3731:layout_width="fill_parent" android3731:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android3731="http://schemas.android.com/apk/res/android">
-    <Button android3731:id="@id/dialog_button" android3731:layout_width="100.0px" android3731:layout_height="wrap_content" android3731:layout_marginTop="5.0dip" android3731:layout_marginRight="5.0dip" android3731:text=" Ok " />
-</RelativeLayout>

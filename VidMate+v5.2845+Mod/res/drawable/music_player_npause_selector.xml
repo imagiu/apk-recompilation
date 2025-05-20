@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android733="http://schemas.android.com/apk/res/android">
-    <item android733:state_pressed="true" android733:drawable="@drawable/music_player_notification_pause_press" />
-    <item android733:drawable="@drawable/music_player_notification_pause" />
-</selector>

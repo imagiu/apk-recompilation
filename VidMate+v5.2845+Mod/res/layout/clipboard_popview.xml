@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android7095:layout_width="wrap_content" android7095:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android7095="http://schemas.android.com/apk/res/android">
-    <LinearLayout android7095:layout_gravity="end|bottom|center" android7095:orientation="vertical" android7095:id="@id/layDownload" android7095:paddingTop="@dimen/dp_10" android7095:paddingBottom="30.0dip" android7095:layout_width="wrap_content" android7095:layout_height="wrap_content">
-        <ImageView android7095:id="@id/btnDownload" android7095:background="@null" android7095:layout_width="wrap_content" android7095:layout_height="wrap_content" android7095:src="@drawable/browser_download_selector" android7095:scaleType="centerCrop" />
-    </LinearLayout>
-</FrameLayout>

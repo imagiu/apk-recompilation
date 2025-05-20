@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android5215:gravity="center_vertical" android5215:orientation="horizontal" android5215:layout_width="fill_parent" android5215:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android5215="http://schemas.android.com/apk/res/android">
-    <ImageView android5215:id="@id/iv_icon" android5215:layout_width="44.0dip" android5215:layout_height="44.0dip" android5215:layout_margin="12.0dip" android5215:src="@drawable/ic_launcher" />
-    <TextView android5215:textColor="@color/color_343434" android5215:id="@id/tv_tips" android5215:layout_width="0.0dip" android5215:layout_height="wrap_content" android5215:text="@string/notice_update" android5215:layout_weight="1.0" />
-    <TextView android5215:textColor="@color/white" android5215:gravity="center" android5215:id="@id/btn_install" android5215:background="@drawable/bg_update_notification_btn_install" android5215:layout_width="60.0dip" android5215:layout_height="26.0dip" android5215:layout_margin="12.0dip" android5215:text="@string/g_install" android5215:textAllCaps="false" />
-</LinearLayout>

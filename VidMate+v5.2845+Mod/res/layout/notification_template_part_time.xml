@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DateTimeView android37:textAppearance="@style/TextAppearance.Compat.Notification.Time" android37:id="@id/time" android37:layout_width="wrap_content" android37:layout_height="wrap_content" android37:singleLine="true"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android37="http://schemas.android.com/apk/res/android" />

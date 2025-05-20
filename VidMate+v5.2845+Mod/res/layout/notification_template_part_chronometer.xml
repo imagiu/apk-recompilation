@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Chronometer android8159:textAppearance="@style/TextAppearance.Compat.Notification.Time" android8159:id="@id/chronometer" android8159:layout_width="wrap_content" android8159:layout_height="wrap_content" android8159:singleLine="true"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android8159="http://schemas.android.com/apk/res/android" />

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android1816:gravity="center_vertical" android1816:background="@color/white" android1816:paddingTop="@dimen/dp_8" android1816:paddingBottom="@dimen/dp_8" android1816:layout_width="fill_parent" android1816:layout_height="wrap_content" android1816:layoutDirection="locale"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:android1816="http://schemas.android.com/apk/res/android">
-    <ImageView android1816:id="@id/iv_icon" android1816:layout_width="@dimen/dp_48" android1816:layout_height="@dimen/dp_48" android1816:layout_marginLeft="@dimen/dp_12" android1816:src="@drawable/ic_launcher" android1816:scaleType="centerCrop" android1816:layout_marginStart="@dimen/dp_12" />
-    <TextView android1816:textSize="14.0sp" android1816:textStyle="bold" android1816:textColor="@color/color_343434" android1816:layout_width="0.0dip" android1816:layout_height="wrap_content" android1816:layout_marginLeft="@dimen/dp_16" android1816:text="@string/single_apk_downloaded" android1816:layout_weight="1.0" android1816:layout_marginStart="@dimen/dp_16" />
-    <TextView android1816:textSize="14.0sp" android1816:textColor="@color/white" android1816:gravity="center" android1816:background="@drawable/bg_install_notice" android1816:layout_width="wrap_content" android1816:layout_height="wrap_content" android1816:layout_marginLeft="@dimen/dp_16" android1816:layout_marginRight="@dimen/dp_16" android1816:minWidth="@dimen/dp_60" android1816:minHeight="@dimen/dp_26" android1816:text="@string/g_install" android1816:layout_marginStart="@dimen/dp_16" android1816:layout_marginEnd="@dimen/dp_16" />
-</LinearLayout>
