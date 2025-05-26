@@ -3,7 +3,7 @@ import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-# --- Safe defaults ---
+# --- Safe fallback replacements ---
 SAFE_DEFAULTS = {
     'color': '@android:color/black',
     'drawable': '@android:drawable/ic_menu_help',
@@ -11,15 +11,14 @@ SAFE_DEFAULTS = {
     'style': '@android:style/Theme.DeviceDefault'
 }
 
-# --- Regex patterns to match references ---
+# --- Match references ---
 REFERENCE_PATTERNS = {
-    'color': re.compile(r'@android:color/([\w_]+)'),
-    'drawable': re.compile(r'@android:drawable/([\w_]+)'),
+    'color': re.compile(r'@(?:android:)?color/([\w_]+)'),
+    'drawable': re.compile(r'@(?:android:)?drawable/([\w_]+)'),
     'string': re.compile(r'@string/([\w_]+)'),
     'style': re.compile(r'@style/([\w_.]+)'),
 }
 
-# --- Scan declared resources ---
 def get_declared_resources(res_dir):
     declared = {key: set() for key in SAFE_DEFAULTS}
     for xml_file in Path(res_dir).rglob("*.xml"):
@@ -35,7 +34,6 @@ def get_declared_resources(res_dir):
             continue
     return declared
 
-# --- Patch a single file ---
 def patch_file(file_path, declared):
     try:
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
@@ -46,31 +44,24 @@ def patch_file(file_path, declared):
         for ref_type, pattern in REFERENCE_PATTERNS.items():
             matches = pattern.findall(content)
             for match in matches:
-                if ref_type == 'color':
-                    # Step 1: Replace @android:color/foo → @color/foo
-                    content = re.sub(f'@android:color/{match}', f'@color/{match}', content)
-                    # Step 2: If not declared, replace with fallback
-                    if match not in declared.get(ref_type, set()):
-                        content = re.sub(f'@color/{match}', SAFE_DEFAULTS['color'], content)
+                is_declared = match in declared.get(ref_type, set())
 
-                elif match not in declared.get(ref_type, set()):
-                    if ref_type == 'string':
-                        content = re.sub(f'@string/{match}', SAFE_DEFAULTS['string'], content)
-                    else:
+                full_refs = [f"@{ref_type}/{match}", f"@android:{ref_type}/{match}"]
+                for ref in full_refs:
+                    if ref in content and not is_declared:
                         replacement = SAFE_DEFAULTS[ref_type]
-                        content = re.sub(f'@(?:android:)?{ref_type}/{match}', replacement, content)
+                        content = content.replace(ref, replacement)
 
         if content != original:
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(content)
-            print(f"Patched: {file_path}")
+            print(f"✅ Patched: {file_path}")
 
     except Exception as e:
         print(f"[ERROR] Failed to patch {file_path}: {e}")
 
-# --- Main patching function ---
 def patch_resources(res_root):
-    print(f"Scanning and patching resources in: {res_root}")
+    print(f"📦 Scanning and patching resources in: {res_root}")
     declared = get_declared_resources(res_root)
     for xml_file in Path(res_root).rglob("*.xml"):
         patch_file(xml_file, declared)
@@ -84,7 +75,7 @@ if __name__ == "__main__":
     apk_path = sys.argv[1]
     res_path = Path(apk_path) / "res"
     if not res_path.exists():
-        print("res/ folder not found!")
+        print("❌ res/ folder not found!")
         sys.exit(1)
 
     patch_resources(res_path)
