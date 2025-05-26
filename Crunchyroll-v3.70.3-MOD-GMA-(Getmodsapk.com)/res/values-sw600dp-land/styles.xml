@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="EmptyLayoutImageStyle">
-        <item name="image_visibility">gone</item>
-    </style>
-    <style name="UserRatingPosterImage">
-        <item name="android:visibility">gone</item>
-    </style>
-</resources>

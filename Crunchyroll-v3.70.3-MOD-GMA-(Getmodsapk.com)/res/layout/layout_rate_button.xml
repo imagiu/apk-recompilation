@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/rate_image" android:duplicateParentState="true" android:layout_width="24.0dip" android:layout_height="24.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <com.airbnb.lottie.LottieAnimationView android:id="@id/rate_animation" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/rate_image" app:layout_constraintLeft_toLeftOf="@id/rate_image" app:layout_constraintRight_toRightOf="@id/rate_image" app:layout_constraintTop_toTopOf="@id/rate_image" />
-    <TextView android:textColor="@color/white" android:id="@id/rates_count" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_marginStart="6.0dip" android:layout_toEndOf="@id/rate_image" app:layout_constraintBottom_toBottomOf="@id/rate_image" app:layout_constraintStart_toEndOf="@id/rate_image" app:layout_constraintTop_toTopOf="@id/rate_image" style="@style/Button3" />
-</androidx.constraintlayout.widget.ConstraintLayout>

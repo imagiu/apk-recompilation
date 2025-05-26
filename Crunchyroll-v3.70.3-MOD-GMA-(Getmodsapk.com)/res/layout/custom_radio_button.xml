@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RadioButton android:textColor="@color/color_white" android:ellipsize="end" android:paddingTop="@dimen/custom_radio_group_padding" android:paddingBottom="@dimen/custom_radio_group_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:paddingStart="@dimen/custom_radio_group_padding_start" android:paddingEnd="@dimen/custom_radio_group_padding" style="@style/RadioButton"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

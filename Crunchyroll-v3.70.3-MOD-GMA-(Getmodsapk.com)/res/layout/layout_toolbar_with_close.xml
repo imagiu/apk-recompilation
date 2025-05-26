@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/toolbar_close" android:background="?selectableItemBackgroundBorderless" android:layout_width="?actionBarSize" android:layout_height="?actionBarSize" android:src="@drawable/ic_cross" android:scaleType="centerInside" android:contentDescription="@string/cancel" />
-    <TextView android:textColor="@color/color_white" android:id="@id/toolbar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="?title" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/HeaderLato" />
-</LinearLayout>

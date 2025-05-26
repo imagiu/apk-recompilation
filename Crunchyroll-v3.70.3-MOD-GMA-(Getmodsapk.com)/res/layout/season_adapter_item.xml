@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/seasons_container" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/dialog_season_content_horizontal_margin"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textColor="@color/season_text_color_selector" android:ellipsize="none" android:id="@id/season_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:paddingVertical="14.0dip" app:layout_constraintEnd_toStartOf="@id/episode_count" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Subheader2LatoSemibold" />
-    <TextView android:textColor="@color/cr_silver_chalice" android:ellipsize="none" android:id="@id/episode_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingVertical="17.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/SmallLatoSemibold" />
-</androidx.constraintlayout.widget.ConstraintLayout>

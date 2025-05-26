@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_gravity="bottom" android:id="@id/ads_media_controller_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="ltr"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.widget.ProgressBar android:id="@id/ads_progress_bar" android:background="@color/ads_timeline_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="4.0dip" android:max="1" android:progress="0" android:minHeight="4.0dip" android:layout_centerHorizontal="true" android:layerType="hardware" android:progressTint="@color/ads_progress_tint_color" style="@android:style/Widget.ProgressBar.Horizontal" />
-</RelativeLayout>

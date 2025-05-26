@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:background="@drawable/show_page_cta_button_drawable" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_cta_play" android:layout_marginEnd="8.0dip" app:tint="@color/black" />
-    <TextView android:textColor="@color/black" android:id="@id/show_page_cta_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" style="@style/PrimaryButton" />
-</LinearLayout>

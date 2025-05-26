@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector android:height="80.0dip" android:width="200.0dip" android:shadowRadius="0.0" android:viewportWidth="200.0" android:viewportHeight="80.0"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-    <path android:fillColor="@drawable/$toolbar_fade_gradient__0" android:pathData="M0,0h200v80h-200z" />
-</vector>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="48.0dip" android:paddingStart="@dimen/tab_padding_horizontal" android:paddingEnd="@dimen/tab_padding_horizontal"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center" android:id="@id/tab_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="4.0dip" />
-    <TextView android:textColor="@drawable/selector_tab_color" android:gravity="center" android:id="@id/tab_text" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/TabBarTextAppearance" />
-</LinearLayout>

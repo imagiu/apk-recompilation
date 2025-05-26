@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="cancellation_rescue_downgrade_horizontal_margin">80.0dip</dimen>
-    <dimen name="cancellation_rescue_horizontal_margin">80.0dip</dimen>
-    <dimen name="cancellation_rescue_max_width">864.0dip</dimen>
-    <dimen name="hero_image_height">516.0dip</dimen>
-</resources>

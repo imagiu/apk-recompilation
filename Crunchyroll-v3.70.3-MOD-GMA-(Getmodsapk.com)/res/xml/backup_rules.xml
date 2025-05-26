@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<full-backup-content>
-    <include domain="sharedpref" path="." requireFlags="clientSideEncryption" />
-    <exclude domain="sharedpref" path="appConfig.xml" />
-    <exclude domain="sharedpref" path="dev_tools.xml" />
-    <exclude domain="sharedpref" path="rt_store_secure.xml" />
-    <exclude domain="sharedpref" path="appStateStore.xml" />
-</full-backup-content>

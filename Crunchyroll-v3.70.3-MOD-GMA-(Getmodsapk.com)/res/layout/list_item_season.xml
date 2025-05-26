@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView android:textColor="@color/cr_silver" android:id="@id/text_season" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Subheader2LatoSemibold"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
