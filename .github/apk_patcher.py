@@ -1,9 +1,9 @@
 import os
 import re
-import xml.etree.ElementTree as ET
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
-# --- Safe fallback replacements ---
+# --- Safe fallbacks ---
 SAFE_DEFAULTS = {
     'color': '@android:color/black',
     'drawable': '@android:drawable/ic_menu_help',
@@ -11,7 +11,7 @@ SAFE_DEFAULTS = {
     'style': '@android:style/Theme.DeviceDefault'
 }
 
-# --- Match references ---
+# --- Resource Patterns ---
 REFERENCE_PATTERNS = {
     'color': re.compile(r'@(?:android:)?color/([\w_]+)'),
     'drawable': re.compile(r'@(?:android:)?drawable/([\w_]+)'),
@@ -41,27 +41,35 @@ def patch_file(file_path, declared):
 
         original = content
 
+        # Explicit fallback for common issue: android:color/black0
+        broken_colors = re.findall(r'@android:color/([\w_]+)', content)
+        for color in broken_colors:
+            if color not in declared['color']:
+                print(f"[FORCE PATCH] {file_path} - @android:color/{color} → {SAFE_DEFAULTS['color']}")
+                content = content.replace(f"@android:color/{color}", SAFE_DEFAULTS['color'])
+
         for ref_type, pattern in REFERENCE_PATTERNS.items():
             matches = pattern.findall(content)
             for match in matches:
-                is_declared = match in declared.get(ref_type, set())
-
-                full_refs = [f"@{ref_type}/{match}", f"@android:{ref_type}/{match}"]
-                for ref in full_refs:
-                    if ref in content and not is_declared:
-                        replacement = SAFE_DEFAULTS[ref_type]
-                        content = content.replace(ref, replacement)
+                if match not in declared.get(ref_type, set()):
+                    full_refs = [
+                        f"@{ref_type}/{match}",
+                        f"@android:{ref_type}/{match}"
+                    ]
+                    for ref in full_refs:
+                        if ref in content:
+                            content = content.replace(ref, SAFE_DEFAULTS[ref_type])
+                            print(f"🔧 Replaced: {ref} → {SAFE_DEFAULTS[ref_type]} in {file_path}")
 
         if content != original:
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(content)
-            print(f"✅ Patched: {file_path}")
 
     except Exception as e:
-        print(f"[ERROR] Failed to patch {file_path}: {e}")
+        print(f"[ERROR] Could not patch {file_path}: {e}")
 
 def patch_resources(res_root):
-    print(f"📦 Scanning and patching resources in: {res_root}")
+    print(f"📦 Patching resources in: {res_root}")
     declared = get_declared_resources(res_root)
     for xml_file in Path(res_root).rglob("*.xml"):
         patch_file(xml_file, declared)
