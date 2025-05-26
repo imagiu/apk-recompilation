@@ -47,9 +47,9 @@ def patch_file(file_path, declared):
             matches = pattern.findall(content)
             for match in matches:
                 if ref_type == 'color':
-                    # Always force android:color → color (local)
+                    # Step 1: Replace @android:color/foo → @color/foo
                     content = re.sub(f'@android:color/{match}', f'@color/{match}', content)
-                    # If still not declared, replace with default
+                    # Step 2: If not declared, replace with fallback
                     if match not in declared.get(ref_type, set()):
                         content = re.sub(f'@color/{match}', SAFE_DEFAULTS['color'], content)
 
@@ -88,4 +88,3 @@ if __name__ == "__main__":
         sys.exit(1)
 
     patch_resources(res_path)
-
